@@ -6,7 +6,9 @@
     "symfony/twig-bridge": "^3",
     "j4mie/idiorm": "^1.5",
     "paquettg/php-html-parser": "^2.2",
-    "doctrine/dbal": "~2.2"
+    "doctrine/dbal": "~2.2",
+        "ext-pdo_sqlite": "*",
+    "ext-sqlite3": "*"
   },
   "autoload": {
     "classmap": [],
