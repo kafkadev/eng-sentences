@@ -10,36 +10,36 @@ if (!strpos($_SERVER['REQUEST_URI'], 'api/')) {
 } else {
 
 
-$app = new Silex\Application();
-$app['debug'] = true;
+  $app = new Silex\Application();
+  $app['debug'] = true;
 
-$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
-  'db.options' => array(
-    'driver'   => 'pdo_sqlite',
-    'path'     => __DIR__.'/app.db',
-  ),
-));
+  $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
+    'db.options' => array(
+      'driver'   => 'pdo_sqlite',
+      'path'     => __DIR__.'/app.db',
+    ),
+  ));
 
 
 //$app['db']->
 //$app['dbs']['sqlite']
-$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
-  'dbs.options' => array (
-    'sqlite' => array(
-      'driver'    => 'pdo_sqlite',
-      'path'     => __DIR__.'/../src/manage/db/Sentences.db'
+  $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
+    'dbs.options' => array (
+      'sqlite' => array(
+        'driver'    => 'pdo_sqlite',
+        'path'     => __DIR__.'/../src/manage/db/Sentences.db'
+      ),
+      'mysql_write' => array(
+        'driver'    => 'pdo_mysql',
+        'host'      => 'mysql_write.someplace.tld',
+        'dbname'    => 'my_database',
+        'user'      => 'my_username',
+        'password'  => 'my_password',
+        'charset'   => 'utf8mb4',
+      ),
     ),
-    'mysql_write' => array(
-      'driver'    => 'pdo_mysql',
-      'host'      => 'mysql_write.someplace.tld',
-      'dbname'    => 'my_database',
-      'user'      => 'my_username',
-      'password'  => 'my_password',
-      'charset'   => 'utf8mb4',
-    ),
-  ),
-));
-
+  ));
+/*
 $connectionParams = array(
   'dbname' => 'mydb',
   'user' => 'user',
@@ -48,7 +48,7 @@ $connectionParams = array(
   'driver' => 'pdo_mysql',
 );
 $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
-
+*/
 
 
 //$query_text = htmlentities(trim($query_text), ENT_QUOTES);
@@ -103,11 +103,19 @@ $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
   }
 
   function getWords($query_text, $limit, $min_size){
-    ORM::configure('sqlite:../manage/db/Sentences.db');
     $dest = setDb("Sentences.db", 'important_words')->where_like("text", '%'.$query_text.'%')->limit(100)->find_array();
 
     return $dest;
   }
+
+  function getFavorites($query_text, $limit, $min_size){
+
+    $dest = setDb("Sentences.db", 'important_words')->limit(1000)->find_array();
+
+    return $dest;
+  }
+
+
 
 
 
@@ -120,13 +128,33 @@ $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
     return $app->json(['getSearch' => $dest], 200);
   });
 
+
+
+  $app->get('/api/addFavorite', function() use($app) {
+    $query_text = isset($_GET) && isset($_GET['text']) ? trim($_GET['text']) : 0;
+      $getText = setDb("Sentences.db", 'important_words')->where('text', $query_text)->limit(1)->find_array();
+  if (!count($getText)) {
+    $word = setDb("Sentences.db", 'important_words')->create();
+    $word->text = $query_text;
+    $word->save();
+
+  }
+    return $app->json([$word->id()], 200);
+  });
+
   $app->get('/api/getLinks/{query_text}', function($query_text) use($app) {
     $dest = setDb("Articles.db", 'full_articles');
     $dest = $dest
+    ->where_not_like('url', '%codepen%')
     ->where_like('title', '%'.$query_text.'%')
     ->limit(100)->find_array();
     return $app->json($dest, 200);
   })->value('query_text', 'css');
+
+  $app->get('/api/getFavorites', function() use($app) {
+    $dest = getFavorites(0,0,0);
+    return $app->json($dest, 200);
+  });
 
 
 
@@ -148,7 +176,7 @@ $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
         'whitespaceTextNode' => false,
       ]);
       $findArr = 'p, h1, h2, h3, h4, h6, a, table';
-$totalArr = [];
+      $totalArr = [];
       foreach ($dom->find($findArr) as $key => $content)
       {
         $totalArr = cleanContent($content, $totalArr);

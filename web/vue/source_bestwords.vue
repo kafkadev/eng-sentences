@@ -122,7 +122,7 @@ module.exports = {
         },
         getWords() {
 
-          fetch(this.$root.apiUrl + '/get_data.php?type=important')
+          fetch(this.$root.apiUrl + '/getFavorites')
           .then((response) => {
               return response.json()
           })

@@ -31,7 +31,8 @@
             <tbody>
                 <tr v-for="(item, key) in $root.sourceLinks">
                     <td>{{key}}</td>
-                    <td><a class="text-primary text-capitalize font-weight-bold curp" :href="'/#/translate-link?text=' + item.value">{{$root.decode(item.text)}}</td>
+                    <td><a class="text-primary text-capitalize font-weight-bold curp"
+                        :href="'/#/translate-link?text=' + item.value">{{$root.decode(item.text)}}</a> - {{item.url.split('/')[2]}}</td>
                 </tr>
             </tbody>
         </table>

@@ -263,7 +263,7 @@ decode : function(str) {
 },
 saveWordHistorySend(text) {
 
-  fetch(this.apiUrl + '/save_word.php?text=' + text.trim() + '&type=save&url=0')
+  fetch(this.apiUrl + '/addFavorite?text=' + text.trim() + '&type=save&url=0')
   .then((response) => {
     return response.json()
   })
