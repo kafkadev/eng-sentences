@@ -54,7 +54,7 @@ module.exports = {
             this.$root.saveWordHistory(text.trim())
             this.words = []
             window.scrollTo(0, 0)
-            fetch(this.$root.apiUrl + '/word.php?limit=100&text=' + text.trim() + '&min_size=' + this.min_size).then((response) => {
+            fetch(this.$root.apiUrl + '/getSentences?limit=100&text=' + text.trim() + '&min_size=' + this.min_size).then((response) => {
                 return response.json()
             }).then((data) => {
                 this.localWords = data.getSearch.map((val) => {
@@ -64,7 +64,7 @@ module.exports = {
                 this.words = this.localWords
             })
 
-            fetch(this.$root.apiUrl + '/word_outsource.php?text=' + text.trim() + '&type=word&url=0').then((response) => {
+          /*  fetch(this.$root.apiUrl + '/word_outsource.php?text=' + text.trim() + '&type=word&url=0').then((response) => {
                 return response.json()
             }).then((data) => {
                 if (data.data) {
@@ -74,7 +74,7 @@ module.exports = {
                     })
                 }
 
-            })
+            })*/
 
         },
         setSource(arr = []) {
