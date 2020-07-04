@@ -114,6 +114,13 @@ $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
 
     return $dest;
   }
+  
+  function textClean($query_text){
+
+    
+    $query_text = str_replace("'", "''", trim($query_text));
+    return $query_text;
+  }
 
 
 
@@ -122,7 +129,7 @@ $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
 
 
   $app->get('/api/getSentences', function() use($app) {
-    $query_text = isset($_GET) && isset($_GET['text']) ? $_GET['text'] : 'css';
+    $query_text = textClean($_GET['text']);
     $dest = setDb("Sentences.db", 'sentences');
     $dest = $dest->where_like('text', '%'.$query_text.'%')->limit(100)->find_array();
     return $app->json(['getSearch' => $dest], 200);
@@ -131,7 +138,7 @@ $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
 
 
   $app->get('/api/addFavorite', function() use($app) {
-    $query_text = isset($_GET) && isset($_GET['text']) ? trim($_GET['text']) : 0;
+    $query_text = textClean($_GET['text']);
       $getText = setDb("Sentences.db", 'important_words')->where('text', $query_text)->limit(1)->find_array();
   if (!count($getText)) {
     $word = setDb("Sentences.db", 'important_words')->create();
@@ -161,10 +168,10 @@ $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
   $app->get('/api/getLink', function() use($app) {
 
     $fullText = "";
-
+    $url = htmlentities(trim($_GET['url']), ENT_QUOTES);
     if (isset($_GET['url'])) {
 
-      $html = file_get_contents($_GET['url'], false, stream_context_create(array('ssl' => array('verify_peer' => false, 'verify_peer_name' => false))));
+      $html = file_get_contents($url, false, stream_context_create(array('ssl' => array('verify_peer' => false, 'verify_peer_name' => false))));
 
 
 
