@@ -129,7 +129,7 @@ $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
 
 
   $app->get('/api/getSentences', function() use($app) {
-    $query_text = textClean($_GET['text']);
+    $query_text = $_GET['text'];
     $dest = setDb("Sentences.db", 'sentences');
     $dest = $dest->where_like('text', '%'.$query_text.'%')->limit(100)->find_array();
     return $app->json(['getSearch' => $dest], 200);
