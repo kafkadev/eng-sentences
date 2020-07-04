@@ -189,7 +189,7 @@ const appsd = new Vue({
         this.tableHelperWords = []
 
   //this.showDictionary = false
-  text = text.trim().replace(/([^a-z\s']+)/gi, '');
+  //text = text.trim().replace(/([^a-z\s']+)/gi, '');
   this.sidebarAddWordText = text
   this.highlightText = text
   this.searchWord(text)
