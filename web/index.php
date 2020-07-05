@@ -130,9 +130,13 @@ $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
 
   $app->get('/api/getSentences', function() use($app) {
     $query_text = $_GET['text'];
-    $dest = setDb("Sentences.db", 'sentences');
-    $dest = $dest->where_like('text', '%'.$query_text.'%')->limit(100)->find_array();
-    return $app->json(['getSearch' => $dest], 200);
+    $sentences = setDb("Sentences.db", 'sentences');
+    //$sentences = $sentences->where_like('text', '%'.$query_text.'%')->limit(100)->find_array();
+    $sentences = $sentences
+    //->raw_query("select distinct text, length(text) count from sentences where text like '%$query_text%' ORDER BY count limit 100")
+    ->where_raw("text like '%$query_text%' ORDER BY length(text)")
+    ->limit(100)->find_array();
+    return $app->json(['getSearch' => $sentences], 200);
   });
 
 
