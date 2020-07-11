@@ -13,7 +13,8 @@ var SourceNews = httpVueLoader('./vue/source_news.vue')
 var SourceArticles = httpVueLoader('./vue/source_articles.vue')
 var SourceVideo = httpVueLoader('./vue/source_video.vue')
 var SourceFiles = httpVueLoader('./vue/source_files.vue')
-var SourceBest = httpVueLoader('./vue/source_bestwords.vue')
+var SourceFavoriteWords = httpVueLoader('./vue/source_favorite_words.vue')
+var SourceFavoriteSentences = httpVueLoader('./vue/source_favorite_sentences.vue')
 var SearchWord = httpVueLoader('./vue/search_word.vue')
 var SearchWordOutsource = httpVueLoader('./vue/search_word_outsource.vue')
 var TranslateLink = httpVueLoader('./vue/translate_link.vue')
@@ -82,10 +83,15 @@ var routes = [
   component: SourceVideo
 },
 {
-  path: '/source-best',
-  name: 'SourceBest',
-  component: SourceBest
+  path: '/source_favorite_words',
+  name: 'SourceFavoriteWords',
+  component: SourceFavoriteWords
 },
+{
+  path: '/source_favorite_sentences',
+  name: 'SourceFavoriteSentences',
+  component: SourceFavoriteSentences
+}
 ];
 
 var router = new VueRouter({

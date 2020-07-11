@@ -34,7 +34,10 @@
                             <a class="nav-link" href="/#/source-news">News</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/#/source-best"> Best Words </a>
+                            <a class="nav-link" href="/#/source_favorite_words"> Best Words </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#/source_favorite_sentences"> Best Sentences </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/#"> Stories </a>

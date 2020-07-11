@@ -122,13 +122,13 @@ module.exports = {
         },
         getWords() {
 
-          fetch(this.$root.apiUrl + '/getFavorites')
+          fetch(this.$root.apiUrl + '/getFavoriteWords')
           .then((response) => {
               return response.json()
           })
           .then((data) => {
             this.categories = _.keys(this.$root.all_words).sort()
-            this.words = _.pluck(data, 'text').reverse()
+            this.words = _.pluck(data, 'word').reverse()
            // console.log(data)
         });
 
