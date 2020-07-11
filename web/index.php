@@ -147,7 +147,7 @@ $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
         $query_text = textClean($_GET['text']);
         $getText    = setDb("Sentences.db", 'important_words')->where('text', $query_text)->limit(1)->find_array();
         if (!count($getText)) {
-            $word       = setDb("Sentences.db", 'words')->create();
+            $word       = setDb("Sentences.db", 'important_words')->create();
             $word->text = $query_text;
             $word->save();
         }
