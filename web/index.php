@@ -94,7 +94,7 @@ if (!strpos($_SERVER['REQUEST_URI'], 'api/')) {
         ->where_raw("text like '% $query_text' OR text like '$query_text %' OR text like '% $query_text %' ORDER BY length(text)")
             ->limit(250)->find_array();
         $getDictionarySentences = setDb("BasicDictionary.db", 'important_words')
-        ->where_raw("text = '$query_text' OR text like '% $query_text' OR text like '$query_text %' OR text like '% $query_text %'")
+        ->where_raw("text = '$query_text' OR text like '% $query_text' OR text like '$query_text %' OR text like '% $query_text %' ORDER BY type")
         //->where_like('text', '%' . $query_text . '%')
             ->limit(250)->find_array();
 
