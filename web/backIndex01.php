@@ -11,7 +11,55 @@ if (!strpos($_SERVER['REQUEST_URI'], 'api/')) {
     $app          = new Silex\Application();
     $app['debug'] = true;
 
+ /*   $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
+        'db.options' => array(
+            'driver' => 'pdo_sqlite',
+            'path'   => __DIR__ . '/app.db',
+        ),
+    ));
+    */
 
+    //$app['db']->
+    //$app['dbs']['sqlite']
+  /*  $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
+        'dbs.options' => array(
+            'sqlite'      => array(
+                'driver' => 'pdo_sqlite',
+                'path'   => __DIR__ . '/../src/manage/db/Sentences.db',
+            ),
+            'mysql_write' => array(
+                'driver'   => 'pdo_mysql',
+                'host'     => 'mysql_write.someplace.tld',
+                'dbname'   => 'my_database',
+                'user'     => 'my_username',
+                'password' => 'my_password',
+                'charset'  => 'utf8mb4',
+            ),
+        ),
+    ));*/
+/*
+$connectionParams = array(
+'dbname' => 'mydb',
+'user' => 'user',
+'password' => 'secret',
+'host' => 'localhost',
+'driver' => 'pdo_mysql',
+);
+$conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
+ */
+
+//$query_text = htmlentities(trim($query_text), ENT_QUOTES);
+    //$query_text = str_replace("'", "''", trim($query_text));
+
+// Register the monolog logging service
+    /*$app->register(new Silex\Provider\MonologServiceProvider(), array(
+    'monolog.logfile' => 'php://stderr',
+    ));*/
+
+// Register view rendering
+    /*$app->register(new Silex\Provider\TwigServiceProvider(), array(
+    'twig.path' => __DIR__.'/views',
+    ));*/
 
     function getSearch($query_text, $limit, $min_size)
     {
@@ -91,11 +139,9 @@ if (!strpos($_SERVER['REQUEST_URI'], 'api/')) {
         //$sentences = $sentences->where_like('text', '%'.$query_text.'%')->limit(100)->find_array();
         $sentences = $sentences
         //->raw_query("select distinct text, length(text) count from sentences where text like '%$query_text%' ORDER BY count limit 100")
-        ->where_raw("text like '% $query_text' OR text like '$query_text %' OR text like '% $query_text %' ORDER BY length(text)")
+        ->where_raw("text like '%$query_text%' ORDER BY length(text)")
             ->limit(100)->find_array();
-        $getDictionarySentences = setDb("BasicDictionary.db", 'important_words')
-        ->where_raw("text like '% $query_text' OR text like '$query_text %' OR text like '% $query_text %' ORDER BY length(text)")
-        //->where_like('text', '%' . $query_text . '%')
+        $getDictionarySentences = setDb("BasicDictionary.db", 'important_words')->where_like('text', '%' . $query_text . '%')
             ->limit(100)->find_array();
 
         return $app->json([
