@@ -13,6 +13,7 @@ var SourceNews = httpVueLoader('./vue/source_news.vue')
 var SourceArticles = httpVueLoader('./vue/source_articles.vue')
 var SourceVideo = httpVueLoader('./vue/source_video.vue')
 var SourceFiles = httpVueLoader('./vue/source_files.vue')
+var SourceDictionary = httpVueLoader('./vue/source_dictionary.vue')
 var SourceFavoriteWords = httpVueLoader('./vue/source_favorite_words.vue')
 var SourceFavoriteSentences = httpVueLoader('./vue/source_favorite_sentences.vue')
 var SearchWord = httpVueLoader('./vue/search_word.vue')
@@ -53,6 +54,11 @@ var routes = [
   path: '/search-outsource',
   name: 'SearchWordOutsource',
   component: SearchWordOutsource
+},
+{
+  path: '/source_dictionary',
+  name: 'SourceDictionary',
+  component: SourceDictionary
 },
 {
   path: '/translate-link',

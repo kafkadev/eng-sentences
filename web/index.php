@@ -92,11 +92,11 @@ if (!strpos($_SERVER['REQUEST_URI'], 'api/')) {
         $sentences = $sentences
         //->raw_query("select distinct text, length(text) count from sentences where text like '%$query_text%' ORDER BY count limit 100")
         ->where_raw("text like '% $query_text' OR text like '$query_text %' OR text like '% $query_text %' ORDER BY length(text)")
-            ->limit(100)->find_array();
+            ->limit(250)->find_array();
         $getDictionarySentences = setDb("BasicDictionary.db", 'important_words')
-        ->where_raw("text like '% $query_text' OR text like '$query_text %' OR text like '% $query_text %' ORDER BY length(text)")
+        ->where_raw("text like '% $query_text' OR text like '$query_text %' OR text like '% $query_text %'")
         //->where_like('text', '%' . $query_text . '%')
-            ->limit(100)->find_array();
+            ->limit(250)->find_array();
 
         return $app->json([
             'getSearch' => $sentences,
@@ -137,11 +137,11 @@ if (!strpos($_SERVER['REQUEST_URI'], 'api/')) {
         return $app->json($dest, 200);
     });
 
-    $app->get('/api/getDictionarySentences', function () use ($app) {
+    $app->get('/api/getDictionarySentences/{query_text}', function ($query_text) use ($app) {
+
         $dest = setDb("BasicDictionary.db", 'important_words');
         $dest = $dest
-            ->where_like('title', '%' . $query_text . '%')
-            ->limit(100)->find_array();
+        ->raw_query("select distinct text from important_words where type = '$query_text' limit 1000")->find_array();
         return $app->json($dest, 200);
     });
 

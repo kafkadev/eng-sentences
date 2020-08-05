@@ -38,6 +38,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/#/source_favorite_sentences"> Best Sentences </a>
+                            <a class="nav-link" href="/#/source_dictionary"> S.Dictionary </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/#/SourceSubtitle"> Subtitles </a>
