@@ -18,6 +18,7 @@ var SourceFavoriteSentences = httpVueLoader('./vue/source_favorite_sentences.vue
 var SearchWord = httpVueLoader('./vue/search_word.vue')
 var SearchWordOutsource = httpVueLoader('./vue/search_word_outsource.vue')
 var TranslateLink = httpVueLoader('./vue/translate_link.vue')
+var SourceSubtitle = httpVueLoader('./vue/source_subtitle.vue')
 var TranslateSubtitle = httpVueLoader('./vue/translate_subtitle.vue')
 var TranslateRaw = httpVueLoader('./vue/translate_raw.vue')
 var Erken = httpVueLoader('./vue/erken.vue')
@@ -37,6 +38,11 @@ var routes = [
   name: 'home',
   props: true,
   component: SourceNews
+},{
+  path: '/SourceSubtitle',
+  name: 'SourceSubtitle',
+  props: true,
+  component: SourceSubtitle
 },
 {
   path: '/search',
@@ -52,7 +58,8 @@ var routes = [
   path: '/translate-link',
   name: 'TranslateLink',
   component: TranslateLink
-},{
+},
+{
   path: '/translate-subtitle',
   name: 'TranslateSubtitle',
   component: TranslateSubtitle

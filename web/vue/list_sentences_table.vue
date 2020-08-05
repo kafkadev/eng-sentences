@@ -193,8 +193,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr class="" v-for="(item, key) in $root.leftTable.getWords" :key="key">
-            <td  class="notranslate" @click="$root.saveWordHistorySend(item.type + ': ' + item.text)"><span class="badge badge-pill badge-warning curp">{{item.ID}}</span></td>
+          <tr class="" v-for="(item, key, index) in $root.leftTable.getWords" :key="key">
+            <td  class="notranslate" @click="$root.saveWordHistorySend(item.type + ': ' + item.text)"><span class="badge badge-pill badge-warning curp">{{key}}</span></td>
             <td class="notranslate">{{item.type}}</td>
             <td class="">
 

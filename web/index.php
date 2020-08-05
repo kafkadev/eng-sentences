@@ -140,7 +140,15 @@ $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
         //->raw_query("select distinct text, length(text) count from sentences where text like '%$query_text%' ORDER BY count limit 100")
         ->where_raw("text like '%$query_text%' ORDER BY length(text)")
             ->limit(100)->find_array();
-        return $app->json(['getSearch' => $sentences], 200);
+        $getDictionarySentences = setDb("BasicDictionary.db", 'important_words')->where_like('text', '%' . $query_text . '%')
+            ->limit(100)->find_array();
+
+
+
+        return $app->json([
+            'getSearch' => $sentences,
+            'getWords' => $getDictionarySentences,
+    ], 200);
     });
 
     $app->get('/api/addFavorite', function () use ($app) {
@@ -173,6 +181,14 @@ $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
     });
     $app->get('/api/getFavoriteWords', function () use ($app) {
         $dest = getFavoriteWords(0, 0, 0);
+        return $app->json($dest, 200);
+    });
+
+    $app->get('/api/getDictionarySentences', function () use ($app) {
+                $dest = setDb("BasicDictionary.db", 'important_words');
+        $dest = $dest
+            ->where_like('title', '%' . $query_text . '%')
+            ->limit(100)->find_array();
         return $app->json($dest, 200);
     });
 

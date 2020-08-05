@@ -40,6 +40,9 @@
                             <a class="nav-link" href="/#/source_favorite_sentences"> Best Sentences </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="/#/SourceSubtitle"> Subtitles </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="/#"> Stories </a>
                         </li>
                         <li class="nav-item">
