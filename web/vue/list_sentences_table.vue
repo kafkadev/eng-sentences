@@ -249,7 +249,7 @@
   <div class="" :class="[$root.tableHelperWords ? 'col-md-6' : 'col-md-6']">
     <template v-if="typet = 'translate_link'">
 
-      <iframe v-show="showIframe" id="iframetest" class="notranslate" @load="insertScriptIntoHead" frameborder="0" style="overflow:hidden;height:360px;width:100%" height="900px" width="100%" :src="'http://sentences.test/api/getLinkFrame?url=' + $route.query.text">
+      <iframe v-show="showIframe" id="iframetest" class="notranslate" @load="insertScriptIntoHead" frameborder="0" style="overflow:hidden;height:360px;width:100%" height="900px" width="100%" :src="location.origin+'/api/getLinkFrame?url=' + $route.query.text">
       </iframe>
     </template>
     <div class="table-responsive" style="height: calc(100vh - 130px);">
