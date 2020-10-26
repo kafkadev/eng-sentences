@@ -197,6 +197,7 @@ $app->get('/api/getLinkFrame', function () use ($app) {
         $html = file_get_contents($url, false, stream_context_create(array('ssl' => array('verify_peer' => false, 'verify_peer_name' => false))));
 
         return $html;
+    }
     });
 
 $app->get('/', function () use ($app) {
