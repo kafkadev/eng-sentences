@@ -295,7 +295,7 @@ module.exports = {
       showIframe: 0,
       selectedVideo: 0,
       article: '',
-      showModeLeft: 1,
+      showModeLeft: 5,
       articleForm: '',
       highlightText: '',
       linkText: '',
