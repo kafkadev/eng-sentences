@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://getbootstrap.com/docs/4.4/examples/dashboard/ -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Sentences Dashboard</title>
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <!-- Favicons -->
+    <meta name="theme-color" content="#563d7c">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="./assets/dashboard.css" rel="stylesheet">
+    <style type="text/css">
+        /* Chart.js */
+        @-webkit-keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .chartjs-render-monitor {
+            -webkit-animation: chartjs-render-animation 0.001s;
+            animation: chartjs-render-animation 0.001s;
+        }
+        .hide {
+          display: none!important;
+      }
+
+
+      .form-control-dark {
+
+        border-color: rgba(255, 255, 255, .1);
+        color: #495057;
+        background-color: #fff;
+    }
+
+    .curp {
+
+        cursor: pointer;
+    }
+    .width50{
+        width: 50%;
+    }
+    .bg-yellow{
+      background-color: yellowgreen;
+  }
+
+  main {
+    padding-top: 0;
+}
+[role="main"] {
+    padding-top: 0;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<iframe id="iframetest" frameborder="0" style="overflow:hidden;height:900px;width:100%" height="900px" width="100%" src="http://sentences.test/api/getLinkFrame?url=https://www.cnbc.com/2020/10/26/shares-of-samsung-electronics-affiliates-rise-after-chairman-lee-kun-hees-death.html">
+</iframe>
+
+   <script src="./assets/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+   <script src="./assets/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+   <script src="./assets/dashboard.js"></script>
+<script src="bigjs.js" id="iframejs">
+    var asd = 'gokhan burada';
+    console.log(asd)
+</script>
+
+
+
+   <script type="text/javascript">
+
+
+setTimeout(()=> {
+insertScriptIntoHead()
+}, 5000)
+
+function insertScriptIntoHead(){
+
+
+    // just do anything
+    //document.getElementById('iframetest').contentDocument.body.prepend("Hello, world1!");
+
+
+
+   // var head = document.getElementById('iframetest').contentWindow.document.getElementsByTagName('head')[0];
+    var script = document.getElementById('iframetest').contentWindow.document.createElement('script');
+    script.textContent  = `
+console.log(document.title)
+    document.addEventListener('mouseup', (e) => {
+      //e.preventDefault();
+      var text = window.getSelection().toString()
+if (text.trim()) {
+parent.postMessage(text, "*")
+     console.log(text, 'mouseup action initiated')
+};
+  });
+    document.addEventListener('dblclick', (e) => {
+      //e.preventDefault();
+      var text = window.getSelection().toString()
+if (text.trim()) {
+parent.postMessage(text, "*")
+     console.log(text, 'dblclick action initiated')
+};
+  });
+
+window.addEventListener('message', function (e) {
+  var mainWindow = e.source;
+  console.log(e)
+  mainWindow.postMessage('burası ifr4ame', e.origin);
+});
+
+
+    `;
+    script.type = 'text/javascript';
+    script.id = 'iframecontent';
+    document.getElementById('iframetest').contentDocument.body.appendChild(script);
+    //head.appendChild(script);
+}
+
+
+
+
+/*
+    function getSelectedText() {
+        if (window.getSelection) {
+            return window.getSelection().toString();
+        } else if (document.selection) {
+            return document.selection.createRange().text;
+        }
+        return '';
+    }​
+
+
+var selectedText = "";
+
+if (window.getSelection) {
+    selectedText = window.getSelection();
+}
+
+if (document.getSelection) {
+    selectedText = document.getSelection();
+}
+
+if (document.selection) {
+    selectedText = document.selection.createRange().text;
+}
+
+function textSelector() {
+   alert(selectedText);
+}
+textSelector();
+
+*/
+
+
+</script>
+
+
+</body>
+
+</html>

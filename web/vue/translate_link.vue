@@ -19,7 +19,7 @@
 
 
 
-<sentences-table :datat="$root.matchArticleToArray($root.articleText)" :typet="'translate_link'"></sentences-table>
+<sentences-table :datat="$root.matchArticleToArray($root.articleText)" :typet="'translate_link'" ></sentences-table>
       </div>
   </template>
 

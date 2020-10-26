@@ -200,7 +200,24 @@ const appsd = new Vue({
       }
 
     },
-    textSelector(e) {
+    textSelectorEvent(text) {
+
+
+      if (text.trim()) {
+        this.tableHelperWords = []
+
+  //this.showDictionary = false
+  //text = text.trim().replace(/([^a-z\s']+)/gi, '');
+  this.sidebarAddWordText = text
+  this.highlightText = text
+  this.searchWord(text)
+
+
+}
+//this.sidebarAddWordText = window.getSelection().toString()
+//this.doubleClick(window.getSelection().toString())
+},
+textSelector(e) {
       e.preventDefault();
 
       var text = window.getSelection().toString()

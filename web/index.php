@@ -4,9 +4,7 @@ ini_set('zlib.output_compression_level', 5);
 require '../vendor/autoload.php';
 use PHPHtmlParser\Dom;
 
-if (!strpos($_SERVER['REQUEST_URI'], 'api/')) {
-    include "index.html";
-} else {
+
 
     $app          = new Silex\Application();
     $app['debug'] = true;
@@ -94,7 +92,7 @@ if (!strpos($_SERVER['REQUEST_URI'], 'api/')) {
         ->where_raw("text like '% $query_text' OR text like '$query_text %' OR text like '% $query_text %' ORDER BY length(text)")
             ->limit(250)->find_array();
         $getDictionarySentences = setDb("BasicDictionary.db", 'important_words')
-        ->where_raw("text = '$query_text' OR text like '% $query_text' OR text like '$query_text %' OR text like '% $query_text %' ORDER BY type")
+        ->where_raw("text = '$query_text' OR text like '% $query_text' OR text like '$query_text %' OR text like '% $query_text %' ORDER BY type, text")
         //->where_like('text', '%' . $query_text . '%')
             ->limit(250)->find_array();
 
@@ -190,8 +188,38 @@ if (!strpos($_SERVER['REQUEST_URI'], 'api/')) {
         return $app->json($strArr, 200);
     });
 
+/*
+<iframe
+frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%"
+src="http://sentences.test/api/getLinkFrame?url=https://www.cnbc.com/2020/10/26/shares-of-samsung-electronics-affiliates-rise-after-chairman-lee-kun-hees-death.html">
+</iframe>
+*/
+    $app->get('/api/getLinkFrame', function () use ($app) {
+
+        $fullText = "";
+        $url      = htmlentities(trim($_GET['url']), ENT_QUOTES);
+        if (isset($_GET['url'])) {
+
+            $html = file_get_contents($url, false, stream_context_create(array('ssl' => array('verify_peer' => false, 'verify_peer_name' => false))));
+
+           /* $dom = new Dom;
+            $dom->loadStr($html, [
+                'removeScripts'          => true,
+                'removeStyles'           => true,
+                'htmlSpecialCharsDecode' => false,
+                'whitespaceTextNode'     => false,
+            ]);*/
+
+
+        }
+        /*
+print_r(get_class_methods($app));
+die();*/
+        return $html;
+       // return $app->json(['text' => $html], 200);
+    });
+
     $app->get('/', function () use ($app) {
-        return $app->json([], 200);
+        return include "index.html";
     });
     $app->run();
-}

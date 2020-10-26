@@ -53,43 +53,58 @@ computed: {
 },
 methods: {
     getFile(e){
-        console.log(e.target.files[0].name.split('.').slice(-1)[0])
-        if (e.target.files[0].name.split('.').slice(-1)[0] == 'srt') {
 
-            this.loadSrt(e)
-        } else if (e.target.files[0].name.split('.').slice(-1)[0] == 'vtt') {
-            this.loadVtt(e)
+      var fileType = e.target.files[0].name.split('.').slice(-1)[0];
+        e.target.files[0].text().then((aa) => {
+        if (fileType == 'srt') {
+
+            this.loadSrt(aa)
+        } else if (fileType == 'vtt') {
+            this.loadVtt(aa)
         }
+        else if (fileType == 'txt') {
+            this.loadTxt(aa)
+        }
+        })
+
+
+
 
 
 
     },
 
-    loadSrt(e){
+    loadTxt(content){
 
-        e.target.files[0].text().then(content => {
-           content = content.split("\r\n\r\n").map((item) => {
-            item = item.split("\r\n").splice(2).join(', ');
+
+           this.$root.articleTextArr = content.split("\n")
+
+
+    },    loadSrt(content){
+
+         /* console.log(content.split("\r"))
+          console.log(content.split("\n"))
+          console.log(content.split("\n\s"))
+          console.log(content.split("\n\r"))
+          console.log(content.split("\r\n\r\n"))
+          console.log(content)*/
+        content = content.split("\n\n").map((item) => {
+            item = item.split("\n").splice(2).join(', ');
             return item;
         })
            this.$root.articleTextArr = content
-           console.log(content.filter(x => x))
-
-       })
 
 
     },
-    loadVtt(e){
+    loadVtt(content){
 
-        e.target.files[0].text().then(content => {
-           content = content.split("\r\n\r\n").map((item) => {
-            item = item.split("\r\n").splice(1).join(', ');
+console.log(content.split("\n\n"))
+           content = content.split("\n\n").map((item) => {
+            item = item.split("\n").splice(1).join(', ');
             return item;
         })
            this.$root.articleTextArr = content
            console.log(content.filter(x => x))
-
-       })
 
 
     },
