@@ -198,9 +198,9 @@ const appsd = new Vue({
 
         },
         textSelectorEvent(text) {
+            text = text.trim();
 
-
-            if (text.trim() && typeof text.trim() === 'string' && !JSON.parse(text.trim())) {
+            if (text.trim() && typeof text.trim() === 'string' && !text.trim().includes(":")) {
                 console.log(text.trim());
                 this.tableHelperWords = []
 
