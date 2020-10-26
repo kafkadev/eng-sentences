@@ -337,6 +337,28 @@ this.showIframe = 1;
    // var head = document.getElementById('iframetest').contentWindow.document.getElementsByTagName('head')[0];
    var script = document.getElementById('iframetest').contentWindow.document.createElement('script');
    script.textContent  = `
+   if (!location.host.split(".").includes("test")) {
+    if (!window.console) window.console = {};
+    var methods = [
+        "log",
+        "debug",
+        "warn",
+        "info",
+        "error",
+        "trace",
+        "dir",
+        "dirxml",
+        "group",
+        "groupEnd",
+        "time",
+        "timeEnd",
+        "assert",
+        "profile",
+    ];
+    for (var i = 0; i < methods.length; i++) {
+        console[methods[i]] = function() {};
+    }
+}
    console.log(document.title)
    document.addEventListener('mouseup', (e) => {
     //e.preventDefault();

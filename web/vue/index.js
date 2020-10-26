@@ -24,6 +24,32 @@ var Erken = httpVueLoader('./vue/erken.vue')
 var NamedWrapper = httpVueLoader('./vue/named.vue')
 
 
+if (!location.host.split(".").includes("test")) {
+    if (!window.console) window.console = {};
+    var methods = [
+        "log",
+        "debug",
+        "warn",
+        "info",
+        "error",
+        "trace",
+        "dir",
+        "dirxml",
+        "group",
+        "groupEnd",
+        "time",
+        "timeEnd",
+        "assert",
+        "profile",
+    ];
+    for (var i = 0; i < methods.length; i++) {
+        console[methods[i]] = function() {};
+    }
+}
+
+
+
+
 /* Router and App setup: */
 var routes = [{
         path: '/post/:post_id',
