@@ -354,13 +354,13 @@ this.showIframe = 1;
       console.log(text, 'dblclick action initiated')
     };
   });
-
+/*
   window.addEventListener('message', function (e) {
     var mainWindow = e.source;
     console.log(e)
     mainWindow.postMessage('burası ifr4ame', e.origin);
   });
-
+*/
 
   `;
   script.type = 'text/javascript';
@@ -370,14 +370,10 @@ this.showIframe = 1;
   }
   },
   mounted(){
-    setTimeout(()=> {
-      //this.insertScriptIntoHead()
-
-    }, 1000)
+  
     var self = this.$root
        window.addEventListener("message", function (e) {
         self.textSelectorEvent(e.data)
-                                console.log(e.data);
 
                             });
   }
