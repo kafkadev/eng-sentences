@@ -364,8 +364,9 @@ this.showIframe = 1;
     //e.preventDefault();
     var text = window.getSelection().toString()
     if (text.trim()) {
-      parent.postMessage(text, "*")
+     /* parent.postMessage(text, "*")
       console.log(text, 'mouseup action initiated')
+      */
     };
   });
   document.addEventListener('dblclick', (e) => {
