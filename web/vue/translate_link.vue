@@ -60,7 +60,7 @@
                 return response.json()
             }).then((data) => {
                    console.log(data)
-           this.$root.articleTextArr = _.pluck(data, 'text')
+          this.$root.articleTextArr = _.pluck(data, 'text')
            this.$root.articleText = this.$root.rawDataClean(_.pluck(data, 'text').join(' '))
          // val.text = val.text.replace(/(<\s*[^>]*>)/gi, ' ');
      })

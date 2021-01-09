@@ -1,0 +1,63 @@
+
+<html lang="de">
+<head>
+  <title>({{mainText}}) Haben Sie einen guten Tag, Wie lange Sie diesen Job gemacht?</title>
+  <meta name="description" content="Haben Sie einen guten Tag, Wie lange Sie diesen Job gemacht?">
+  <meta http-equiv="content-language" content="de">
+  <meta property="og:locale" content="de" />
+
+</head>
+
+<body lang="de">
+  <p  lang="de" style="opacity: 0.01;height:0;width:0;overflow: hidden;" >Haben Sie einen guten Tag, Wie lange Sie diesen Job gemacht?</p>
+  <p  lang="de" style="opacity: 0.01;height:0;width:0;overflow: hidden;" >Sie sehen diese Seite, weil Sie einen Adblocker eingeschaltet haben. Deaktivieren Sie diesen bitte für BILD.de, um unsere Artikel wieder lesen zu können.
+
+    BILD bietet Ihnen Nachrichten rund um die Uhr. Unsere 500 Reporter berichten für Sie aus aller Welt. Um das zu ermöglichen, sind wir auch auf Werbeeinnahmen angewiesen.
+
+    Ihr Adblocker sperrt die Werbung auf BILD.de. Doch ohne Erlöse aus dem Verkauf von Werbeplätzen können wir die Arbeit unserer Journalisten nicht finanzieren.
+
+  Ihr Team von BILD</p>
+
+  {% set items = searchs %}
+  <table lang="en">
+    {% for row in searchs %}
+    <tr>
+      <td>
+        <span style="display:block;"  class="notranslate">{{ row.text }}</span>
+        <span style="color:blue;">{{ row.text }}</span>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  <table lang="en">
+    {% for row in getWords %}
+    <tr>
+      <td>
+        <span style="display:block;"  class="notranslate">{{ row.text }}</span>
+        <span style="color:blue;">{{ row.text }}</span>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  <style type="text/css">
+    body {
+      background-color: #FFFFFF;
+      font-family: Verdana, Tahoma, sans-serif;
+      font-size: 12px;
+      color: #000000;
+      margin: 10px;
+      padding: 0;
+    }
+
+
+    table {
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+  </style>
+
+</body>
+</html>
+

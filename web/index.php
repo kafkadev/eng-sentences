@@ -8,6 +8,31 @@ use PHPHtmlParser\Dom;
 
 $app          = new Silex\Application();
 $app['debug'] = true;
+$app['cache.path'] = __DIR__.'/cache';
+$app->register(new Silex\Provider\HttpCacheServiceProvider(), array(
+    'http_cache.cache_dir' => __DIR__.'/cache/',
+    'http_cache.esi'       => null,
+));
+
+$app->register(new Silex\Provider\TwigServiceProvider(), array(
+    'twig.path' => __DIR__.'/views',
+    'twig.cache' => false,
+    'cache' => false,
+    'twig.auto_reload' => true,
+    'auto_reload' => true
+));
+
+
+
+$app->after(function ($request, $response) {
+    $response->headers->set('Access-Control-Allow-Origin', '*');
+});
+
+
+
+
+
+
 
 
 
@@ -158,7 +183,7 @@ $app->get('/api/getLink', function () use ($app) {
             'htmlSpecialCharsDecode' => false,
             'whitespaceTextNode'     => false,
         ]);
-        $findArr  = 'p, h1, h2, h3, h4, h6, a, table';
+        $findArr  = 'div, p, h1, h2, h3, h4, h6, a, table';
         $totalArr = [];
         foreach ($dom->find($findArr) as $key => $content) {
             $totalArr = cleanContent($content, $totalArr);
@@ -193,12 +218,69 @@ $app->get('/api/getLinkFrame', function () use ($app) {
 
     $fullText = "";
     $url      = htmlentities(trim($_GET['url']), ENT_QUOTES);
+    $urlParse      = implode('/',array_slice(explode('/', $url), 0,3));
     if (isset($_GET['url'])) {
         $html = file_get_contents($url, false, stream_context_create(array('ssl' => array('verify_peer' => false, 'verify_peer_name' => false))));
-
-        return $html;
+        $dom = new Dom;
+        $dom->loadStr($html, [
+            'removeScripts'          => true,
+            'removeStyles'           => true,
+            'htmlSpecialCharsDecode' => false,
+            'whitespaceTextNode'     => false,
+        ]);
+        $html = $dom->innerHtml;
+        $html = str_replace("head>", "head><base href='".$urlParse."/'>", $html);
+        return strip_tags($html, '<html><head><body><base><meta><p><br><span><h1><h2><h3><h4><div><ul><li><code><style><link><title><link/><b><button><a>');
     }
     });
+
+
+$app->get('/api/testhtml', function () use ($app) {
+    $query_text = $_GET['text'];
+
+    $has_query_text = textClean($query_text);
+    $getText        = setDb("Sentences.db", 'words')->where('word', $has_query_text)->limit(1)->find_array();
+    if (!count($getText)) {
+        $word       = setDb("Sentences.db", 'words')->create();
+        $word->word = $has_query_text;
+        $word->save();
+    }
+
+    $sentences = setDb("Sentences.db", 'sentences');
+        //$sentences = $sentences->where_like('text', '%'.$query_text.'%')->limit(100)->find_array();
+    $sentences = $sentences
+        //->raw_query("select distinct text, length(text) count from sentences where text like '%$query_text%' ORDER BY count limit 100")
+    ->where_raw("text like '% $query_text' OR text like '$query_text %' OR text like '% $query_text %' ORDER BY length(text)")
+    ->limit(50)->find_array();
+    $getDictionarySentences = setDb("BasicDictionary.db", 'important_words')
+    ->where_raw("text = '$query_text' OR text like '% $query_text' OR text like '$query_text %' OR text like '% $query_text %' ORDER BY type, text")
+        //->where_like('text', '%' . $query_text . '%')
+    ->limit(20)->find_array();
+
+return $app['twig']->render('tablepop.html', [
+        'mainText' => $query_text,
+        'searchs' => $sentences,
+        'getWords'  => $getDictionarySentences,
+    ]);
+
+
+   /* return $app->json([
+        'getSearch' => $sentences,
+        'getWords'  => $getDictionarySentences,
+    ], 200);*/
+});
+
+
+
+
+
+
+
+
+$app->get('/testhtml2', function () use ($app) {
+    return $app['twig']->render('tablepop.html', ['name' => 'Fabien']);
+});
+
 
 $app->get('/', function () use ($app) {
     return include "index.html";
