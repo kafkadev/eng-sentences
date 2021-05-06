@@ -9,18 +9,18 @@
           <button type="button" class="btn btn-sm btn-outline-secondary" @click="$root.articleText = 0, getArticle()">Set</button>
           <button type="button" class="btn btn-sm btn-outline-secondary" @click="showWordsTab = !showWordsTab">Words</button>
           <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+        </div>
+
+
+        <nav-list></nav-list>
       </div>
+    </div>
 
 
-      <nav-list></nav-list>
+
+
+    <sentences-table v-if="$root.articleTextArr" :datat="$root.articleTextArr" :typet="'translate_link'"></sentences-table>
   </div>
-</div>
-
-
-
-
-<sentences-table v-if="$root.articleTextArr" :datat="$root.articleTextArr" :typet="'translate_link'"></sentences-table>
-</div>
 </template>
 
 
@@ -39,33 +39,39 @@ module.exports = {
       minSize: 20,
       showWordsTab: false,
       regexQuery: '',
-  }
-},
-computed: {
+    }
+  },
+  computed: {
     getQueryText() {
       if (this.$route.query && this.$route.query.text) {
         this.$root.linkText = this.$route.query.text
         this.getArticle()
 
+      }
+      return true;
     }
-    return true;
-}
-},
-methods: {
+  },
+  methods: {
     getFile(e){
 
       var fileType = e.target.files[0].name.split('.').slice(-1)[0];
-        e.target.files[0].text().then((aa) => {
+      e.target.files[0].text().then((content) => {
+        console.log('RAW1',content)
+        console.log('RAW2',content.split("\r"))
+        console.log('RAW3',content.split("\n"))
+        console.log('RAW4',content.split("\n\s"))
+        console.log('RAW5',content.split("\n\r"))
+        console.log('RAW6',content.split("\r\n\r\n"))
+        console.log('RAW7',content.split("\n\n"))
         if (fileType == 'srt') {
-
-            this.loadSrt(aa)
+          this.loadSrt(content)
         } else if (fileType == 'vtt') {
-            this.loadVtt(aa)
+          this.loadVtt(content)
         }
         else if (fileType == 'txt') {
-            this.loadTxt(aa)
+          this.loadTxt(content)
         }
-        })
+      })
 
 
 
@@ -75,125 +81,63 @@ methods: {
     },
 
     loadTxt(content){
+      this.$root.articleTextArr = this.$root.matchArticleToArray(content)
 
+    },
+    loadSrt(content){
 
-           this.$root.articleTextArr = content.split("\n")
-
-
-    },    loadSrt(content){
-
-         /* console.log(content.split("\r"))
-          console.log(content.split("\n"))
-          console.log(content.split("\n\s"))
-          console.log(content.split("\n\r"))
-          console.log(content.split("\r\n\r\n"))
-          console.log(content)*/
-        content = content.split("\n\n").map((item) => {
-            item = item.split("\n").splice(2).join(', ');
-            return item;
-        })
-           this.$root.articleTextArr = content
+      content = content.split("\n\r").map((item) => {
+        item = item.split("\r").splice(2).join(', ');
+        return item;
+      })
+      console.log(content)
+      this.$root.articleTextArr = content
 
 
     },
     loadVtt(content){
-
-console.log(content.split("\n\n"))
-           content = content.split("\n\n").map((item) => {
-            item = item.split("\n").splice(1).join(', ');
-            return item;
-        })
-           this.$root.articleTextArr = content
-           console.log(content.filter(x => x))
-
+      content = content.split("\n\n").map((item) => {
+      console.log(item)
+        item = item.split("\n").splice(1).join(', ');
+        return item;
+      })
+      console.log(content)
+      this.$root.articleTextArr = content
 
     },
     loadCSV(url)
     {
-
       fetch(url)
       .then((response) => {
         return response.text();
-    })
+      })
       .then((content) => {
        content = content.split("\r\n\r\n").map((item) => {
         item = item.split("\r\n");
         return item;
-    })
+      })
        this.$root.articleTextArr = content
-       console.log(content.filter(x => x))
-      // document.getElementById('frm').innerHTML = content.filter(x => x).join("<br>");
-  });
-   /* xmlhttp=null;
-           // code for Mozilla, etc.
-           if (window.XMLHttpRequest)
-           {
-             xmlhttp=new XMLHttpRequest();
-           }
-           // code for IE
-           else if (window.ActiveXObject)
-           {
-             xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-           }
+     });
 
-           if (xmlhttp!=null)
-           {
-             xmlhttp.onreadystatechange=state_Change;
-             xmlhttp.open("GET",url,true);
-             xmlhttp.send(null);
-           }
-           else
-           {
-             alert("Your browser does not support XMLHTTP.");
-         }*/
-     },
-
-     state_Change()
-     {
-          // if xmlhttp shows "loaded"
-          if (xmlhttp.readyState==4)
-          {
-            // if "OK"
-            if (xmlhttp.status==200)
-            {
-              var content = xmlhttp.responseText;
-             // console.log(content.split("\r\n\r\n"))
-             content = content.split("\r\n\r\n").map((item) => {
-              item = item.split("\r\n").splice(1).join(', ');
-              return item;
-          })
-             console.log(content)
-
-            /*content = content.replace(/</g, '&lt;');
-              content = content.replace(/>/g, '&gt;');
-              content = content.replace(/\n/g, '<br>');*/
-
-              document.getElementById('frm').innerHTML = content.join("<br>");
-          }
-          else
-          {
-              alert("Problem retrieving CSV file");
-          }
-      }
-  },
-  getArticle(){
+    },
+    getArticle(){
       window.scrollTo(0, 0)
       this.$root.articleText = ''
       setTimeout(() => {
 
         fetch(this.$root.apiUrl + '/getLink?url='+this.$root.linkText.trim()).then((response) => {
           return response.json()
-      }).then((data) => {
+        }).then((data) => {
          console.log(data)
          this.$root.articleTextArr = _.pluck(data, 'text')
          this.$root.articleText = this.$root.rawDataClean(_.pluck(data, 'text').join(' '))
          // val.text = val.text.replace(/(<\s*[^>]*>)/gi, ' ');
-     })
+       })
 
 
-  }, 100)
+      }, 100)
+    }
   }
-}
 }
 </script>
 <style scoped>

@@ -31,13 +31,12 @@ module.exports = {
 
     data() {
         return {
-            queryText: 'nouns',
+            queryText: 'irregular_verbs01',
             article: '',
             articleForm: '',
             sourceType: 1,
             words: [],
-            categories: ["possessive_pronouns","strong_words","infinitive_verbs","nouns","proverbs","commonWords","ergative_verbs","state_verbs","general_verbs","adverbs","pairs","rhymelees_words","personalNouns","irregular_verbs","units_of_time","word_clues","sentences","personal_pronouns","adjs","states_of_drunkenness","compounds","prepositions","resume_action_words","interjections","encouraging_words","phrasal_verb","irregular_verbs01"
-].sort(),
+            categories: "possessive_pronouns,strong_words,infinitive_verbs,nouns,proverbs,commonWords,ergative_verbs,state_verbs,general_verbs,adverbs,pairs,rhymelees_words,personalNouns,irregular_verbs,units_of_time,word_clues,sentences,personal_pronouns,adjs,states_of_drunkenness,compounds,prepositions,resume_action_words,interjections,encouraging_words,conjunctions,timetransitions,hello,congratulations,address,repeat,sayno,saygoodbye,saygoogjob,sayeasydificult,sayinterest,saycorrect,sayopinion,sayremember,sayiknow,sayverygood,sayforexample,sayconclusion,sayithink,saytobehonest,saycalmdown,sayidontknow,restaurant,hotel,shop,saygeneral,saycomplex,sayhobby,saytrip,classroom,sayyourself,saywork,sayphone,sayidiomsletter,saywellsoon,sayyouarewelcome,saysorry,sayagree,sayapology,yourself,modals,pmodals".split(',').sort(),
             min_size: 20
         }
     },
@@ -45,22 +44,22 @@ module.exports = {
     methods: {
         getWordList(cat, type = 0) {},
         getWords(cat) {
-this.words = [];
-          fetch(this.$root.apiUrl + '/getDictionarySentences/' + cat)
-          .then((response) => {
+            this.words = [];
+            fetch(this.$root.apiUrl + '/getDictionarySentences/' + cat)
+            .then((response) => {
               return response.json()
           })
-          .then((data) => {
-            this.words = _.pluck(data, 'text')
-        });
+            .then((data) => {
+                this.words = _.pluck(data, 'text')
+            });
 
-      },
+        },
 
-  },
+    },
 
-  created() {
-
-}
+    created() {
+this.getWords('irregular_verbs01')
+    }
 }
 </script>
 

@@ -9,13 +9,7 @@
                 <button type="button" class="btn btn-sm btn-outline-secondary" @click="getLinks(queryText)">Set</button>
                 <button type="button" class="btn btn-sm btn-outline-secondary">Words</button>
             </div>
-            <div class="form-group mb-0">
-                <select class="custom-select" v-model="queryText" @change="getLinks(queryText)">
-                    <option value="">Select a Source</option>
-                    <option v-for="(item, key) in sourceDomains">{{item}}</option>
-                </select>
 
-            </div>
             <nav-list></nav-list>
         </div>
     </div>
@@ -32,7 +26,7 @@
                 <tr v-for="(item, key) in $root.sourceLinks">
                     <td>{{key}}</td>
                     <td><a class="text-primary text-capitalize font-weight-bold curp"
-                        :href="'/#/translate-link?text=' + item.value">{{$root.decode(item.text)}}</a> - {{item.url.split('/')[2]}}</td>
+                        :href="'/#/TranslateLink?text=' + item.value">{{$root.decode(item.text)}}</a> - {{item.url.split('/')[2]}}</td>
                 </tr>
             </tbody>
         </table>
@@ -73,25 +67,7 @@ module.exports = {
         }
     },
     methods: {
-        setArticle() {
-            //setTimeout(() => this.$root.articleText = this.articleForm.match( /[^\.!\?]+[\.!\?]+|[^\.!\?]+/g ), 2000)
-            //.match(/[^.\n]+/g)
-            //( *?[a-zA-Z'.!?.] *?){10,}
-            //.match(/(\S.+?[.!?])(?=\s+|$)(?<!\s([A-Z]|[a-z]){1,3}.)+/g)
-            window.scrollTo(0, 0)
-            setTimeout(() => {
-                if (this.issubtitle) {
-                    this.$root.articleText = this.$root.rawDataClean(this.$root.articleForm.split('\n').join('. '))
 
-                } else {
-                    this.$root.articleText = this.$root.rawDataClean(this.$root.articleForm)
-
-                }
-
-            }, 2000)
-            //setTimeout(() => this.$root.articleText = this.$root.articleForm, 2000)
-
-        },
         getLinks(text = '') {
             window.scrollTo(0, 0)
             setTimeout(() => {
@@ -116,19 +92,7 @@ module.exports = {
 
             }, 100)
         },
-                getLinks2(link = 'https://www.pcworld.com/category/car-tech/') {
-            window.scrollTo(0, 0)
-            setTimeout(() => {
 
-                fetch('http://sentences.test/api/getLinks.php?url=' + this.queryText.trim()).then((response) => {
-                    return response.json()
-                }).then((data) => {
-                    this.$root.sourceLinks = data
-                    // val.text = val.text.replace(/(<\s*[^>]*>)/gi, ' ');
-                })
-
-            }, 100)
-        },
 
     },
     created(){

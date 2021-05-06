@@ -1,0 +1,1062 @@
+type,text,defn
+root,"ab | abbreviate - 6 | abdicate - hs | aberration - hs | abject - 8 | abnormal - 5 | absence - 6 | absolute - 6 | abstinence - hs | abstract - 6 | abundance - 7","apart (prefix) | away from | off"
+root,"abil | ability | capability | incapability","aptitude | handy"
+root,"abs | abduct | absent | abstain | abstemious | abstention | abstinence | abstract | abstraction | abstruse | aversion","apart (prefix) | away from | off"
+root,"acerb | acerbic | acerbity | exacerbate",bitter
+root,"acid | acid | acidic | acidity",sour
+root,"acou | acoustics",hearing
+root,"acr | acrid | acrimonious","bitter | sour"
+root,"acro | acrobat | acronym | acrophobia | acropolis","first | pointed | top | upper"
+root,"act | action | activist | counteract | exact | interaction | reactionary | retroactive | transact | transaction","act | do | drive | go | move | urge"
+root,"acu | acumen | acupuncture | acute",sharp
+root,"ad | adequate - 7 | adhere - 8 | adjourned - 8 | admission - 6 | admonish - hs | adventurous - 5 | adversity - 8 | advocate - 7","near (prefix) | to | towards"
+root,"aedi | edifice | edify","house | temple"
+root,"aer | aerate | aerial | aerodynamics | aeronaut | aeronomy",air
+root,"ag | agency | agenda | agent | agility | agitate | agitation | coagulate | synagogue","act | do | drive | go | move | urge"
+root,"ago | agog","do | go | move"
+root,"agog | demagogue | pedagogue | pedagogy | synagogue","bringing | leading"
+root,"agon | agony | antagonist | protagonist","contest | struggle"
+root,"agr | agrarian | agribusiness | agriculture | peregrinate","country | field | land"
+root,"al | alloy","near (prefix) | to | towards"
+root,"ala | aileron | aisle | alar | alary | aliform","a wing"
+root,"alacr | alacritous | alacrity","lively | swift"
+root,"ali | alias | alibi | alien | alienate | inalienable","another | other"
+root,"all | allegory | allergy | allomorph | allopathy | parallel",other
+root,"alt | altar | altimeter | altitude | contralto | exalt",high
+root,"alter | alter ego | altercation | alternate | alternative | unaltered",other
+root,"altr | altruism",other
+root,"am | amateur | amatory","friend | love"
+root,"amb | ambition","about | around | both (prefix)"
+root,"ambi | ambiance | ambidextrous | ambient | ambiguity | ambiguous | ambition | ambivalence","about | around | both (prefix)"
+root,"ambl | amble | preamble","go | walk"
+root,"ambul | ambulance | ambulatory | funambulist | perambulate | somnambulist",walk
+root,"amen | amenity",pleasant
+root,"ami | amiable | amity","friend | love"
+root,"amic | amicability | amicable","friend | love"
+root,"amor | amorous | enamor | paramour","friend | love"
+root,"amphi | amphibian | amphitheater","around (prefix) | on both sides"
+root,"ampl | amplification | amplify | amplitude","large | spacious"
+root,"an | anarchy | anecdote | anesthesia","lacking | not | without"
+root,"andr | androgynous | android | misandry",man
+root,"ang | angle | triangulate","a corner | angle"
+root,"anim | animosity | equanimity | magnanimous | pusillanimous | unanimous","mind | soul | spirit"
+root,"anima | animal | animate | inanimate","breath | life"
+root,"ann | anniversary | annual | annuity | per annum",year
+root,"ante | antebellum | antecedent | antediluvial | anterior | anteroom",before
+root,"anth | amaranthperianth | anthology | anthozoan",flower
+root,"anthrop | anthropoid | anthropology | anthropomorphic | lycanthrope | misanthrope | philanthropy",man
+root,"anti | antibody | anticlimax | antidote | antipathy | antiseptic | antisocial","against (prefix)"
+root,"antiqu | antique | antiquity",ancient
+root,"anx | anxiety | anxiolytic | anxious | anxiousness","distressed | worried"
+root,"apert | aperient | aperture | apparatus | april",open
+root,"apo | apocalypse | apocryphal | apogee | apologize | apology","away (prefix)"
+root,"apt | adapt | adaptation | adept | aptitude | inept","fit | join"
+root,"aqu | aquarium | aquatic | aqueduct | aqueous",water
+root,"arbitr | arbiter | arbitrary | arbitrate | arbitration","judge | umpire | witness"
+root,"arc | arcade | arch | archer | archery",bow
+root,"arch | anarchy | heptarchy | hierarchy | monarch | monarchy | oligarchy | patriarch","govern | rule"
+root,"archaeo | archaeologist | archaic","OLD | ancient"
+root,"arche | archetype","chief | first | original"
+root,"archi | archbishop | archenemy | archipelago | architect","chief | first | principal"
+root,"ard | ardent | ardor | arson",burn
+root,"argu | argue | arguer | argument | overargue","accuse | assert | prove"
+root,"arium | aquarium","a place for (suffix)"
+root,"arma | armada | armadillo | armament | armistice | armory | disarm | unarmed","arms | implements | tools | weapon"
+root,"art | artifact | artifice | artificial | artisan | artist","craft | skill"
+root,"artill | artillary",equip
+root,"aster | aster | asterisk | asteroid | disaster",star
+root,"astr | astrology | astronaut | astronomer | astronomy",star
+root,"athl | ahlete | decathlon | pentathlon",contest
+root,"atroc | atrocious | atrocity",cruel
+root,"au | auspices | inauspicious",bird
+root,"auct | auction | auctioneer | main root=aug",increase
+root,"aud | audible | audience | audit | audition | obedient","hear | listen"
+root,"audac | audacious","bold | dare"
+root,"aug | augment | augur | augury | august",increase
+root,"austr | austral | australia","south | the south wind"
+root,"auto | autocrat | autograph | automatic | automotive | autonomy",self
+root,"auxil | auxiliary","help | increase"
+root,"av | auspice | avian | aviary | aviation | avionics",bird
+root,"aval | avalanche","descend rapidly"
+root,"bast | bastile | bastion",build
+root,"bat | abate | battalion | batter | battery | battle | combat | debate | embattle | rebate",beat
+root,"be | bedraggle - 7 | behavior - 5 | belittle - hs | beloved - 5 | beseech - 7 | bestow - 5 | betray - 6 | bewildering - 7","on all sides; overly; with a quality (prefix)"
+root,"bel | belle | belmont | belvedere | embellish","beautiful | fair | fine"
+root,"bell | antebellum | bellicose | belligerent | rebel | rebellion",war
+root,"bene | benediction | benefactor | benefice | benefit | benevolent | benign","good | well"
+root,"bi | binary | bipartisan | bipolar","twice | two"
+root,"bibl | biblical | bibliography | bibliophile",book
+root,"bio | amphibious | antibiotic | autobiography | biodegradable | biogenic | biology | biometrics | biopsy | symbiosis",life
+root,"blust | bluster | blusterous | blustery","blow violently"
+root,"bole | enblem | hyperbole | metabolism | parable | symbol","put | throw"
+root,"bomb | bombard | bombardment","BOOMING NOISE"
+root,"bon | bonanza | bonny | bonus",good
+root,"botan | botanical | botany",herb
+root,"boun | bountiful | bounty",good
+root,"brac | bracelet | embrace","the two arms"
+root,"brev | abbreviate | breviary | brevity | brief",short
+root,"bri | abridge | brief","brief | short"
+root,"bull | bullet | bulletin | bullion | ebullient","boil | bubble"
+root,"burs | bursar | disburse | reinburse","money | purse"
+root,"by | bypass | bystander","side (prefix)"
+root,"cad | cadence | caducous | decadence","fall | sink"
+root,"cada | cadaver | cadaverous",corpse
+root,"cal | calisthenics | calligraphy | calomel | kaleidoscope","beautiful | beauty"
+root,"calc | caulk | cockatrice | inculcate | recalcitrant","press | tread"
+root,"calcu | calculable | calculator | calculus",pebble
+root,"cald | caldron | scald",hot
+root,"calor | caloric | calorie",heat
+root,"camp | campaign | campus | championship | encampment | scamp",field
+root,"can | canine | kennel",dog
+root,"cand | candle | candor | incandescent | incendiary","burn | glow"
+root,"candid | candid | candidate","clear | sincere | white"
+root,"cant | accent | accentuate | cantata | incantation | incentive | recant","sing | song"
+root,"cap | capable | capacious | capacity | captious | captivate | captive | captor","hold | seize | take"
+root,"capit | capital | capitalism | capitation | capitulate | captain | decapitate | precipitate | precipitous",head
+root,"capitul | capitilar | capitulate | recapitulate","chapter | head"
+root,"capt | cape | captain",head
+root,"cardi | cardiac | cardiology | pericardium",heart
+root,"caric | career | caricature | carriage | chariot","load | wagon"
+root,"carmen | charm | charming","magical formula | song"
+root,"carn | carnage | carnal | carnation | carnelian | carnival | carnivorous | carrion | reincarnate",flesh
+root,"cart | carte-blanche | cartel | cartography | cartoon | cartouche | cartridge","a paper"
+root,"cas | cascade | casual | casualty | occasional","fall | sink"
+root,"cas/cid/cad | cadence | cascade | casualty | occasional","fall | sink"
+root,"cast | caste | castigate | catastrophe | chastise","chaste | pure"
+root,"cata | cataclysm | catacomb | catalyst | catapult | cataract | catastrophe","down (prefix)"
+root,"cauld | cauldron","hot | warm"
+root,"caus | because | causal | causality | cause","case | motive | reason | sake"
+root,"caust | caustic | cauterize | holocaust","burn | heat"
+root,"caut | caution | cautious | precaution","guard against"
+root,"cav | cavernous | cavity | concave | excavate",hollow
+root,"cave | caution | caveat emptor","beware | guard against"
+root,"ceas | deceased","go | yield"
+root,"ced | accede | antecedent | cede | concede | intercede | precede | precedent | recede | secede","go | yield"
+root,"ced/cess | ancestry | procedure | recede | succession","go | yield"
+root,"ceed | exceed | proceed | succeed","go | yield"
+root,"ceipt | receipt","hold | seize | take"
+root,"ceit | conceit","hold | seize | take"
+root,"ceiv | conceive | deceive","hold | seize | take"
+root,"cel | ceiling | celestial | celestiality",heaven
+root,"celebr | celebrate | celebration | celebrity","crowd | honor | solemnize"
+root,"celer | accelerate | celerity","speed | swift"
+root,"cent | centennial | centigrade | centipede | centuple | centurion | century",hundred
+root,"centr | central | centrifugal | concentric | eccentric | egocentric | epicenter",center
+root,"cept | accept | acceptable | concept | conception | deception | exception | intercept | receptacle | reception | susceptible","hold | seize | take"
+root,"cerebr | cerebral",brain
+root,"cern | concern | discern | discreet | secret | unconcern","observe | separate"
+root,"cert | ascertain | certificate | certify | concert | uncertain","settled | sure"
+root,"cess | ancestor | ancestry | concession | excess | incessant | success | succession","go | yield"
+root,"chal | nonchalant","heat | warm"
+root,"champ | championship",field
+root,"chand | chandelier","burn | glow"
+root,"chant | chantcleer | enchanting",sing
+root,"char | chariot | discharge","load | wagon"
+root,"chast | chastise","chaste | pure"
+root,"che | alchemist | alchemy | chemist | chemistry","mix | pour out"
+root,"chef | achievable | achieve | achiever | chiefly | outachieving","end | head"
+root,"chor | choir | chorea | choreography | chorus","chorus | dance"
+root,"chrom | chromatic | chromosome","color | pigment"
+root,"chron | anachronism | chronic | chronicle | chronology | synchronize",time
+root,"cid | accident | accidentally | coincidence | deciduous | incidence | occidental | recidivism","fall | sink"
+root,"cide | concise | decide | fratricide | genocide | homicide | insecticide | precise | regicide | scissors | suicide","cut | kill | slay"
+root,"cil | conciliate | conciliatory | council | reconcile","bring together | unite"
+root,"cili | cilia | ciliary | supercilious",eyelid
+root,"cinct | cincture | precinct | succinct",bind
+root,"cine | cinema | cinematic | cinematography","motion picture | move"
+root,"cip | anticipate | discipline | emancipate | incipient | recipe | recipient | reciprocate","hold | seize | take"
+root,"cipit | precipitate | precipitous",head
+root,"circ | circle | circuit | circuitous | circular | circulate | circus","circle | ring"
+root,"circum | circumference | circumlocution | circumnavigation | circumspect","around (prefix) | on all sides"
+root,"cise | chisel | concise | decisive | exorcise | incision | incisive | precise | precision | scissors","cut | kill"
+root,"cit | excite | illicit | incite | recitation | resuscitate | solicitous","arouse | set in motion | summon"
+root,"civ | civic | civil | civilization | civvies | uncivilized",citizen
+root,"claim | acclaim | claim | claimant | exclaim | exclamation | proclaim | proclamation | reclaim","call out | declare"
+root,"clar | clarinet | clarion | clarity | declare",clear
+root,"claus | clause | claustrophobia",close
+root,"cleer | chanticleer",clear
+root,"clin | climax | decline | incline | recline","bend | lean | slant | slope"
+root,"cliv | acclivity | declivity | proclivity",slope
+root,"clois | cloister","close | shut"
+root,"clos | disclose | enclose","close | shut"
+root,"clud | conclude | exclude | include | occlude | preclude | seclude","close | shut"
+root,"clus | inclusive | occlusion | recluse | seclusion","close | shut"
+root,"clus/clud | inclusive | preclude | recluse | seclusion","close | shut"
+root,"coagu | coagulate",curdle
+root,"coct | biscuit | concoct | decoction | precocious","boil | cook"
+root,"cogit | cogitation","know | ponder | think"
+root,"cognit | cognition | cognoscenti | incognito | recognition",know
+root,"cogniz | cognizance | cognizant | recognizance | recognize",know
+root,"com | coherence - hs | committee - 5 | communication - 5 | comparative - 7 | compassion - 6 | compensation - 8 | complication - 7 | compulsion - 8","together (prefix) | with"
+root,"commun | commune | communicate | community",common
+root,"compar | comparability | comparative | compare","alike | matching"
+root,"comtemn | contempt | contemptible | contemptuous","despise | scorn"
+root,"con | conical | conifer",cone
+root,"conn | reconnaissance",know
+root,"consul | consult | consultation","consult | deliberate | take counsel"
+root,"contra | contradict | contrarian | contrary | contrast | controversy","against | opposite"
+root,"copi | copious | copyright | cornucopia","abundance | plenty"
+root,"cord | accord | concordance | cordate | cordiality | discord | recorder",heart
+root,"corn | capricorn | cornea | corner | cornet | cornucopia | unicorn",horn
+root,"coron | cornice | corolla | corollary | corona | coronation | coroner | coronet",crown
+root,"corp | corporal | corporation | corpse | corpulent | corset | esprit de corps | incorporate",body
+root,"cort | cortege",court
+root,"cosm | cosmetic | cosmic | cosmonaut | cosmopolitan | microcosm","order | ornament | universe | world"
+root,"counter | counteract | counterfeit | countermand","against (prefix)"
+root,"cour | coarse | courier | course",run
+root,"cours | concourse | discourse | recourse",run
+root,"court | courteous | courtesy | courtly","enclosure | farmyard | garden"
+root,"crac | aristocracy | autocracy | democracy | plutocracy | theocracy",govern
+root,"crat | aristocrat | autocrat | democrat | technocrat",govern
+root,"creas | decrease | increase","grow | rise"
+root,"creat | creative | creature | procreate | recreation | uncreative","create | make"
+root,"cred | credence | credentials | credibility | creditor | credo | creed | incredible | incredulous",believe
+root,"creet | accretion | concrete | discreet | secrete","GROW | INCREASE"
+root,"cresc | crescendo | crescent","grow | increase"
+root,"cret | accretion | concrete | crescent | secrete","grow | increase"
+root,"crimin | criminal | discriminate | recriminate","crime | distinguish"
+root,"crit | criterion | critic | critical | critique | hypocrite","a judge | choose | separate"
+root,"cruc | crucial | crucify | excruciate",cross
+root,"crus | cruise | crusade",cross
+root,"crypt | apocryphal | cryptic | cryptography","hidden | vault"
+root,"cub | cubicle | incubate | incubus","lie down | sit"
+root,"culp | culpable | culprit | exculpate | inculpate | mia culpa","blame | fault | offense"
+root,"cult | agriculture | cultivate | cultural | horticulture",till
+root,"cumb | encumber | incumbent | procumbent | recumbent | succumb","lie down | recline"
+root,"cur | concur | current | incur | occur | recur",run
+root,"cura | accurate | curate | curative | curator | cure | curious | manicure | pedicure | procure | secure | sinecure","attention | care"
+root,"curr | concurrent | currency | occurrence | recurrent",run
+root,"curs | cursory | excursion | incursion | precursor",run
+root,"cus | accusation | excusable | excuse | inexcusable | recuse","case | reason | sake"
+root,"cycl | bicycle | cycle | cyclical | cyclone | cyclops | encyclopedia | tricycle | unicycle","circle | wheel"
+root,"cyn | cynic | cynicism | cynosure",dog
+root,"dact | didactic",teach
+root,"dain | dainty | dignitary | disdain | indignant",worthy
+root,"dat | date | edition | mandate | perdition | redition | tradition",give
+root,"de | dedication - 7 | deficiency - 8 | delegation - 8 | deliberate - 6 | delusion - 7 | desolate - 7 | destination - 6 | destructive - 8","away | downward completely (prefix) | off | reversal | undoing"
+root,"deb | debenture",owe
+root,"debt | indebtedness",owe
+root,"deca | decade | decathlon",ten
+root,"decor | decorate | decoration | decorous | decorum","beauty | elegance | splendor"
+root,"dei | deify | deity",God
+root,"del | delete | deleterious | deletion | indelible","destroy | erase"
+root,"dem | demagogue | democracy | epidemic","common people | people"
+root,"demi | demigod | demijohn | demitasse","half (prefix)"
+root,"demon | pandemonium",demon
+root,"dendr | dendrite | dendrology | philodendron | rhododendron",tree
+root,"dens | condensation | condense | dense | density","close | thick"
+root,"dent | dental | denticle | dentifrice | denture | indentation | trident",tooth
+root,"derm | dermatology | epidermis | hypodermic | pachyderm | taxidermy",skin
+root,"dexter | dexterity | dexterous","right-hand; skillful"
+root,"dextr | ambidextrous | dextrose","right-hand; skillful"
+root,"di | diary | dietitian | diurnal | meridian | quotidian | sundial",day
+root,"dia | diabetes | diagnosis | dialect | dialog | diameter | digress","apart (prefix) | between | through"
+root,"dicat | abdicate | dedicate | indicate | predicate","declare | speak"
+root,"dict | abdicate | addicted | benediction | contradict | dedication | dictate | dictatorial | diction | dictionary | edict | indictment | interdict | malediction | predict | valedictorian | verdict","declare | say | speak"
+root,"dign | dignify | dignitary | dignity | disdain | indignant","merited | worthy"
+root,"dilig | diligence | diligent","choose | like | select"
+root,"direct from french | creche","crib | nursery"
+root,"direct from old english | wassail","to be hale"
+root,"direct-latin & german | myrrh","aromatic gum"
+root,"dis | disperse | disseminate | dissipate | dissociate | dissolve","apart | asunder | away from (prefix)"
+root,"dit | addition | edition | editorial | extradite | perdition | redition | tradition",give
+root,"dit/dat | addition | editorial | extradite | tradition","give | push"
+root,"divid | device | devise | divide | dividend | division | individual",divide
+root,"divin | divine | divinity",divine
+root,"divis | devise | division | divisor | indivisible",divide
+root,"doc | docile | doctor | doctorate | doctrine | documentary | dogmatic | indoctrinate",teach
+root,"dogm | dogma | dogmatic",opinion
+root,"dol | condole | condolence | doleful | dolorous | indolence | indolent","grieve | suffer | worry"
+root,"dom | domain | dome | domestic | domicile",house
+root,"domin | dominate | domineer | dominion | domino | predominate","lord | master"
+root,"don | condone | donation | donor | dowry | guerdon | pardon","gift | give"
+root,"donna | prima donna","lady (Italian)"
+root,"dorm | dormant | dormer | dormitory",sleep
+root,"dors | do-si-do | dorsal | dossal | dossier | endorse",back
+root,"dos | dose","a giving"
+root,"dot | anecdote | antidote | endowment",given
+root,"dou | doubtful",doubt
+root,"dox | doxology | orthodox | paradox","glory | opinion | praise"
+root,"dra | drama | dramatize | drastic","act | perform | play"
+root,"drom | dromedary | hippodrome | palindrome | syndrome","a running"
+root,"dub | dubious | indubitable",doubt
+root,"duc | conduce | deduce | ducat | educate | educe | induce | seduce","bring | lead"
+root,"duct | aqueduct | conducive | induct | seductive","bring | lead"
+root,"dulc | dulcet | dulcify | dulcimer | dulcinea",sweet
+root,"dur | duration | endurance | endure",last
+root,"dynam | dynamics | dynamism | dynamite",power
+root,"dys | dysentery | dysfunction | dysplasia","abnormal | bad | ill | impaired | sick"
+root,"e (ec & ef) | ecstasy | eczema | effect | effusive | eject | elaborate | emanate","out (prefix)"
+root,"eco | eco-activist | eco-catastrophe | ecology | ecosystem","environment | house"
+root,"ecu | execute | executive | executor",follow
+root,"edif | edification | edifice | edify",build
+root,"ego | egocentric | egotist","I | self"
+root,"egor | allegory | categorize | category",speak
+root,"egr | peregrinate","field | land"
+root,"egri | peregrination",field
+root,"eido | kaleidoscope","form | image | shape"
+root,"ela | elastic | elasticity","drive | flexible"
+root,"electr | electrode | electron | electronics","amber | electric"
+root,"elig | diligent | electable | electorate | elegant | eligible","pick out | select"
+root,"emia | anemia | hypervolemia | leukemia","blood condition (suffix)"
+root,"empt/em | example | exempt | peremptory | premium | redeem | redemption","buy | take"
+root,"en | enchantment - 5 | enclosure - 6 | endure - 5 | energetic - 8 | engrave - 6 | enthusiastic - 7 | environmental - 7 | envision - 8","in | into | to cover or contain (prefix)"
+root,"endo | endocrine | endoscope | endothermic","inside | within"
+root,"enn | biennial | centennial | perennial",year
+root,"epi | epidermis | epigram | episode | epitaph | epitome","on the outside (prefix) | over | upon"
+root,"ept | adept | inept","fit | join"
+root,"equ | adequate | equal | equanimity | equation | equilibrium | equinox | equitable | equity | equivalent | equivocal | equivocate","equal | same"
+root,"eque | equestrian | equine",horse
+root,"erg | allergy | energetic | energy | ergometer | ergonomics",work
+root,"err | aberration | errant | erratic | erroneous | error | unerring",wander
+root,"esce | acquiesce | adolescent | coalesce | convalescent | iridescent","becoming (suffix) | process of beginning"
+root,"estim | esteem | estimate",value
+root,"eth | ethical | ethics | ethos","behavior | custom | moral"
+root,"ethic | ethical | ethics | ethos","behavior | moral"
+root,"eu | eulogize | eulogy | euphemism | euphonious | euthanasia","good | well (prefix)"
+root,"ex | excel - 8 | exception - 6 | exclamation - 6 | exclusive - 8 | excursion - 6 | exotic - 6 | expectation - 7 | extensive - 8","out | out of | outside (prefix)"
+root,"exampl | example | exemplary | exemplify","model | pattern | sample"
+root,"exo | exodus | exogamy | exogenous | exotic","outer (prefix) | outside"
+root,"extra | extraneous | extraordinary | extrapolate | extravagance","beyond (prefix)"
+root,"fa | affable | confabulate | fable | fabulous | fate | ineffable | infantry | preface",speak
+root,"fac | benefactor | facade | facile | facilitate | faction | factor | factory | faculty | olfactory","do | make"
+root,"fac/fic | artificial | deficiency | facade | faction | faculty | magnificent | olfactory | personification | proficient | ratification | suffice | superficial","do | make"
+root,"faci | deface | efface | facade | facial | superficial | surface","face | figure | form"
+root,"fall | fallacious | fallacy | fallible | falter | infallible","beguile | deceive | err"
+root,"fals | false | falsetto | falsification | falsify",deceive
+root,"fam | defamation | defame | famous | infamous | infamy","public opinion | report"
+root,"fas | nefarious","law | right"
+root,"fast | fastidious","conceit | pride"
+root,"fatu | fatuity | fatuous | infatuate","feeble | foolish | silly"
+root,"faul | default | fault",deceive
+root,"fav | favor | favorite","goodwill | to be favorably inclined"
+root,"fect | affect | affectation | affection | confection | defect | defection | infect | infection | perfect | perfection","act | do | form | make"
+root,"feder | confederate | confederation | confereracy | federal","league | treaty"
+root,"feit/fac | counterfeit | forfeit | surfeit","do | make"
+root,"fend | defend | offend",strike
+root,"fens | defensive | indefensible | offensive",strike
+root,"fer | circumference | confer | defer | fertile | infer | odoriferous | refer | referee | reference | suffer | transfer | vociferous","bear | bring | carry"
+root,"ferm | ferment | fermentation","cause to rise | leaven"
+root,"ferv | effervesce | fervent | fervid | fervor",boil
+root,"fest | feast | festival | festive",feast
+root,"fic | beneficiary | deficiency | deficient | difficult | efficacious | magnificent | personification | proficient | suffice | superficial","do | make"
+root,"fict | fictile | fiction | fictitious","fashion | feign"
+root,"fid | affidavit | bona fide | confidential | infidel","faith | trust"
+root,"fig | configuration | disfigure | effigy | figment | figurative | figure","feign | form | make | shape"
+root,"fil | filament | filigree | fillet | profile","line | thread"
+root,"fin | affinity | confine | define | definitive | finale | fine | finesse | finish | indefinite | infinite | refine","end | limit"
+root,"firm | affirm | confirm | confirmation | firmament | firmness | infirm | infirmary","firm | steadfast | strong"
+root,"fix | affix | fixation | prefix | suffix | transfixed","fastened | fixed"
+root,"flagr | conflagration | flagrant",burn
+root,"flam | flamboyant | inflammatory",burn
+root,"flect | deflect | genuflect | inflection | reflect",bend
+root,"flex | circumflex | flexible | flexor | reflex",bend
+root,"flict | affliction | conflict | inflict","dash | strike"
+root,"flig | profligate","dash | strike"
+root,"flor | floral | florid | florist | flourish",flower
+root,"flu | affluent | effluence | fluent | fluid | flume | flux | influence | mellifluous | superfluous",flow
+root,"fluctu | fluctuate","a wave"
+root,"foli | cinquefoil | defoliate | exfoliate | foliage | folic acid | folio | portfolio",leaf
+root,"forc | reinforcement",strong
+root,"fore | forebear | forebode | forecast | forehead | foreman | forestall | foretell","before | earlier (prefix) | previous"
+root,"form | conform | deform | formula | inform | reform | transform | uniform","form | shape"
+root,"formid | formidability | formidable",fear
+root,"fort | comfort | comfortable | effort | forte | fortification | fortitude | reinforcement",strong
+root,"fortu | fortuitous","casual | chance | luck"
+root,"fortun | fortunate | fortune | misfortune","chance | fortune"
+root,"found | foundation | founder | profound","bottom | foundation"
+root,"fourn | furnish | performance","accomplish | complete"
+root,"fract | fraction | fractious | fracture | fragment | infraction | refract",break
+root,"frag | fragile | fragment | fragmentation",break
+root,"frater | fraternal | fraternity",brother
+root,"fratr | fratricide | friar",brother
+root,"frig | frigid | frigidity | refrigerator","be cold"
+root,"front | affront | confront | effrontery | frontal","face | forehead"
+root,"fruct | fructose","enjoy | fruit"
+root,"frug | frugal","fruits of the earth | thrift"
+root,"fruit | fruitful | fruition","enjoy | produce"
+root,"frustra | frustrate | frustration","in vain"
+root,"fug | centrifugal | centrifuge | fugitive | refuge | subterfuge",flee
+root,"fum | fumigant | fumigation",smoke
+root,"funct | defunct | function | perfunctory",perform
+root,"fund | found | fundamental | funding | profound",bottom
+root,"fur | furtive",steal
+root,"fus | confuse | diffuse | effusion | fusion | profuse | transfusion","melt | pour"
+root,"gam | amalgamate | bigamy | endogamy | monogamy | polygamy",marriage
+root,"gastr | gastric | gastronomy | gastropod",stomach
+root,"gen | congenial | denegrate | generation | gentle","kind | race"
+root,"geo | apogee | geocentric | geode | geography | geology","earth | ground | soil"
+root,"geri | geriatric","old age"
+root,"germ | germ | germane | germinate","bud | seed | vital part"
+root,"geron | genontology | gerontocracy","old man"
+root,"gest | congestion | digestion | gestation | gesture | register | suggest","bring | carry"
+root,"glac | glacial | glacier | glacis",ice
+root,"glom | conglomerate","ball of yarn"
+root,"gloss | glossary","language | tongue | word"
+root,"glot | epiglottis",tongue
+root,"glutin | agglutinate | gluten | glutinous","bond | glue"
+root,"glyc | glycerol | hypoglycemia | triglyceride",sugar
+root,"gnit/not | acquaint | cognition | cognitive | cognizant | incognito | recognition | recognize",know
+root,"gno | agnostic | diagnose | gnome | prognosticate",know
+root,"gon | hexagon | polygon","angle | corner"
+root,"gorg | gargle | gorge | gorgeous",throat
+root,"grac | disgrace | grace | gracious","pleasing | thankful"
+root,"grad | aggression | aggressive | centigrade | congress | congressional | congressman | degrade | degree | gradient | gradual | gradually | graduate | graduation | ingredient | progress | progressive | retrograde | transgress | transgression","degree | go | step | walk"
+root,"gramm | anagram | diagram | epigram | grammatical | monogram | programme","a letter | written character"
+root,"grand | aggrandize | grandeur | grandiloquent | grandiose | grandstand","great | large"
+root,"graph | autograph | calligraphy | demography | geography | graphite | holograph | lithography | seismograph",write
+root,"grat | congratulate | grateful | gratify | gratis | gratitude | gratuitous | ingrate | ingratiate","pleasing | thankful"
+root,"grat/grac | disgrace | gracious | gratitude | ingrate","pleasing | thankful"
+root,"grav | aggravate | engrave | graveness | gravitate | gravity | grievance | grieve","heavy | weighty"
+root,"gred | ingredient","degree | step"
+root,"gree | agreement | disagreeable","pleasing | thankful"
+root,"greg | aggregate | congregation | egregious | gregarious","flock | herd"
+root,"gress | aggression | congressman | digress | egress | progressive","step | walk"
+root,"griev | grievance","heavy | weighty"
+root,"gyn | gynecology | misogyny",woman
+root,"gyr | gyrate | gyration | gyre | gyroscope","circle | ring"
+root,"hab | behavior | haberdashery | habit | habitual | rehabilitate","have | hold"
+root,"habit | habitat | habitation | habitual | inhabitant","abide | dwell | live"
+root,"hal | exhalation | halitosis | inhalant | inhale",breathe
+root,"hap | haphazard | hapless | happen | mishap","by chance"
+root,"harb | harbinger | harbor","shelter (German)"
+root,"hard | foolhardy","harden | make brave"
+root,"harm | harmonic | harmoniously | harmonize | harmony","a joining | fitting | joint"
+root,"haut | haughty | haute couture","grand (French) | high"
+root,"heart | heartbroken","heart (compound word)"
+root,"hedr | cathedral | octahedron | polyhedron","base | seat"
+root,"heir | heiress | heirloom",inherit
+root,"helic | helicopter | heliport | helix",spiral
+root,"helio | aphelion | heliocentric | heliograph | heliolatry | heliotrope | helium | perihelion","the sun"
+root,"hem | hemophilia | hemorrhage",blood
+root,"hemat | hematite",blood
+root,"hemi | hemiparasite | hemiplegia | hemisphere","half (prefix)"
+root,"hend | apprehend | apprehensive | reprehensible",grasp
+root,"her | adhere | adherence | coherence | incoherent | inherent","hold fast | stick"
+root,"hered | hereditary","heir | inherit"
+root,"heri | heritage | inheritance",inherit
+root,"hero | heroism",hero
+root,"hes | adhesion | adhesive | cohesion | cohesive | hesitate","hold fast | stick"
+root,"hetero | heterodox | heterogeneous | heteronym","another (prefix) | different | other"
+root,"hex | hexagon","six (prefix)"
+root,"hib | exhibitor | prohibit","have | hold as customary | occupy"
+root,"hibit | exhibit | prohibit | prohibition","have | hold"
+root,"hiero | hierarchy | hierocracy | hieroglyphics","priestly | sacred"
+root,"hod | method | odometer | period | synod","road | way"
+root,"holo | catholic | holistic | holocaust | hologram",whole
+root,"homeo | homeopathy","like | same"
+root,"homo | homogeneous | homonym",same
+root,"horr | horrendous | horrible | horrid | horrify | horror","shudder | stand on end"
+root,"hortus | horticultural | horticulture | horticulturist","a garden"
+root,"hosp | hospice | hospitable | hospital | hostel | hostess | hostler | hotel","guest | host"
+root,"host | hostage | hostile","an enemy"
+root,"hum | exhume | humble | humility | humus","earth | the ground"
+root,"hydr | dehydrate | hydrangea | hydrant | hydraulics | hydrogen | hydrophobia",water
+root,"hyper | hyperactive | hyperbole | hypertension","above (prefix) | over"
+root,"hypn | hypnosis | hypnotic | hypnotism | hypnotize",sleep
+root,"hypo | hypocrisy | hypoglycemia | hypotenuse | hypothermia | hypothesis | hypothetical","beneath | under (prefix)"
+root,"icon | iconoclast | iconography | iconology",image
+root,"ideid | idyl | idyllic","form | shape"
+root,"iden | identification | identify | identity",same
+root,"ideo | idealistic | ideology","idea | thought"
+root,"idio | idiom | idiosyncrasy | idiot","one's own | peculiar"
+root,"ign | igneous | ignite | ignition",fire
+root,"in | immortality - 8 | impatience - 7 | impractical - 7 | improbable - 8 | indefinite - 7 | injustice - 6 | insatiable - 7 | invalid - 7","not (prefix)"
+root,"insul | insular | insulate | insulation | islet | isolate | peninsula",island
+root,"intellec | intellect | intellectual","power to know"
+root,"intellig | unintelligible","power to think"
+root,"inter | intercept | interfere | interject | interval","among (prefix) | between"
+root,"intra | intramural | intraocular | intrastate | intravenous","within (prefix)"
+root,"intrin | interior | intrinsic",inward
+root,"invid | envious | envy | invidious",envy
+root,"irish | limerick","A county in Ireland"
+root,"irrir | irritable | irritate | irritation","exasperate | excite | provoke"
+root,"isl | islet",island
+root,"iso | isobar | isometric | isosceles | isotope",equal
+root,"iss | issue | reissue","depart | go forth | go out"
+root,"it | ambition | circuit | exit | sedition | transit",go
+root,"iter | iterate | iteration | reiterate","again | repeat"
+root,"itiner | itinerant | itinerary",journey
+root,"jac | adjacent","lie | throw"
+root,"ject | adjective | dejected | interject | projection","cast | throw"
+root,"joc | jocose | jocosity | jocular | jocund","a jest | joke"
+root,"join | adjoining | disjointed",join
+root,"journ | adjourn | bonjour | journal | journey | sojourn","daily | day"
+root,"jud | judgment",judge
+root,"judic | adjudicate | judicial | judiciary | judicious | prejudice","judge | judgment"
+root,"jug | conjugal | conjugate | subjugate","join | yoke"
+root,"jun | junior | juniper",young
+root,"junct | adjunct | conjunction | injunction | junction | juncture | subjunctive",join
+root,"jur | injurious | jurisdiction | jurist | perjury","law | right"
+root,"jure | abjure | conjure | perjure",swear
+root,"jus | adjust | injustice | justification | readjustment | unjustly","law | right"
+root,"juven | juvenescent | juvenile | juvie | rejuvenate",young
+root,"kilo | kilometer","one thousand (prefix)"
+root,"kine | kinetics",move
+root,"labor | belabor | collaborate. elaborate | collaboration | laboratory | laborious",work
+root,"lacer | lacerate | laceration","mangled | torn"
+root,"lact | lactation | lacteal | lactescent | lactose | lettuce",milk
+root,"lang | language",tongue
+root,"langu | languid | languish | languor","be weary"
+root,"laps | collapse | collapsible | elapse | lapse",slip
+root,"lass | alas | lass | lassitude | late","faint | weary"
+root,"lat | elated | legislative | relate | translation","bring | carry | lift"
+root,"later | collateral | equilateral | lateral | quadrilateral | unilateral",side
+root,"laud | applaud | cum laude | laudable | plaudits",praise
+root,"lav | lavatory | lave | lavender | lavish",wash
+root,"lax | laxative | laxity | relax",loose
+root,"leas | release",loose
+root,"lect | intellect | predilection | recollection | select","choose | gather"
+root,"leg | lecture | legend | legible | lesson","gather the ""sense"" | read"
+root,"lega | allege | colleague | delegate | delegation | legacy | legate | relegate","appoint | bring | send"
+root,"lege | elect | electoral | elegance | elegant | legion | legume","choose | gather | pick"
+root,"lei | leisure","be permitted"
+root,"lemm | dilemma | lemma","received or taken for granted | something taken"
+root,"lent | relent","loose | slack"
+root,"leo | chameleon | dandelion | leonard | leopard",lion
+root,"lev | alleviate | irrelevant | leverage | levitate | levity",light
+root,"lev/liev | elevate | irrelevant | leaven | lever | levy | relevant | relieve","lift up | raise | rise"
+root,"lexi | lexicographer | lexicology | lexicon","a word | phrase | saying"
+root,"li | liable | liaison | lien","bind | hold | tie"
+root,"liber | deliver | liberal | liberate | libertine | liberty | livery",free
+root,"liber, libr | deliberate | deliberation | liberate","balance | weigh"
+root,"libr | libel | library",book
+root,"lic | illicit | leisure | license | licentious","be permitted"
+root,"lict | dereliction | relic | relict",leave
+root,"lig | diligence | diligent | eligible | intelligent | negligible","choose | collect | gather"
+root,"lin | crinoline | linen | lining | linseed",flax
+root,"line | delineate | lineal | linear",line
+root,"lingu | bilingual | language | lingo | linguist | linguistics",tongue
+root,"linqu | delinquency | delinquent | relinquish","abandon | leave"
+root,"lip | eclipse | ellipse | elliptical",leave
+root,"liter | alliteration | literacy | literary | literature | obliterate",letter
+root,"lith | lithography | megalith | monolith",stone
+root,"liver | delivery",free
+root,"loc | allocate | dislocate | locality | locate | locomotion | relocation",place
+root,"locut | circumlocution | elocution | interlocutor","speak | talk"
+root,"log | analogy | apology | catalog | dialogue | epilogue | eulogy | illogical | logic | logistics | monologue | neologism | prologue | syllogism","reason | speech | word"
+root,"logy | criminology | etymology | genealogy | geology | theology","study of (suffix)"
+root,"long | elongate | longevity | longitude | oblong | prolong | purloin",long
+root,"loqu | eloquent | loquacious | obloquy | soliloquy | ventriloquist","speak | talk"
+root,"lot | lotion",wash
+root,"loy | alloy",bind
+root,"luc | elucidate | lucid | lucifer | pellucid | translucent","light | shine"
+root,"luct | reluctant","struggle | wrestle"
+root,"lud | allude | collude | delude | interlude | ludicrous | prelude","laugh | mock | play | sport"
+root,"lug | deluge",wash
+root,"lum | illuminate | luminary",light
+root,"lum/lus | illuminate. illustrate | lackluster | luminary",light
+root,"lun | lunacy | lunar | lunate | lunatic | lunation",moon
+root,"lus | allusion | collusion | delusion | elusive | illusion","laugh | mock | play | sport"
+root,"lustr | illustrate | lackluster | luster | lustrous","enlighten | light"
+root,"lut | ablution | dilute | dilution | pollute",wash
+root,"macro | macrocosm | macrophage | macroscopic","large (prefix)"
+root,"magn | magnanimous | magnate | magnificent | magnify | magnitude | magnum",great
+root,"mal | maladroit | malcontent | malediction | malfeasance | malfunction","bad | evil (prefix) | ill | wrong"
+root,"man | emancipate | manacles | manifest | manipulate",hand
+root,"mand | command | countermand | demand | mandamus | mandate | remand","command | order"
+root,"mania | kleptomania | maniac | maniacal | megalomania | pyromania",madness
+root,"mans | manor | manse | mansion | permanent | remain","dwell | stay"
+root,"mar | aquamarine | marina | marinate | marine | mariner | maritime | marsh | rosemary","pool | the sea"
+root,"mater | maternal",mother
+root,"matr | maternal | matriarch | matriculate | matrimony | matron | metropolis",mother
+root,"mb | somber",shadow
+root,"mean | demeanor | misdemeanor","drive | threaten"
+root,"medi | immediately | median | mediate | mediator | medieval | mediocre | mediterranean | medium","between | middle"
+root,"medit | mediator | meditate | meditation","contemplate | ponder"
+root,"mega | megalith","great (prefix) | large"
+root,"megalo | megalomania | megalomyx","great | large (prefix)"
+root,"melo | melodious | melodrama | melody",song
+root,"memor | commemorate | memento | memoir | memorable | memorize | memory","mindful | remembering"
+root,"mena | amenable | demeanor | menace | promenade","drive | threaten"
+root,"mend | amend | amendment | emendation | mendacious | mendacity","defect | fault"
+root,"mens | commensurate | dimension | immense | measure | mensuration",measure
+root,"mer | marsh | mere | mermaid",lake
+root,"merg | emerge | emergence | merge | submerge","dip | sink | to plunge"
+root,"meri | merit | meritocracy | meritorious","deserve | earn"
+root,"meta | metaphor | metaphysical | metastasis","after | along with | among | change (prefix)"
+root,"meter | barometer | diameter | geometry | perimeter | thermometer",measure
+root,"metr | geometry | metric | symmetry | trigonometry",measure
+root,"metro | metropolis",mother
+root,"micro | microbe | microcosm | microscopic",small
+root,"migr | emigrate | immigrate | migrant | migratory",wander
+root,"milit | miles | militant | military | militia",soldier
+root,"min | eminence | eminent | imminent | preeminent | prominent",project
+root,"minn | diminish | diminution | diminutive | miniature | minuet | minute","diminish | lessen | make small"
+root,"minor | minority",less
+root,"minut | diminution | minuet | minuscule | minute","diminish | lessen | make small"
+root,"mir | admire | marvel | miracle | mirage | mirror","behold | look | wonder at"
+root,"mis | misanthrope | misogamy | misogyny | misoneism",hate
+root,"miss | admit | admittedly | commissar | commission | commitment | committee | compromise | demise | dismissal | emissary | emission | emit | inadmissible | intermission | intermittent | messenger | missile | missionary | missive | noncommittal | omission | permissible | permitted | premise | promise | remiss | remittance | submission | surmise. | transmit","send (wcity)"
+root,"mistl | mistletoe",twig
+root,"mit | admit | commit | emit | intermittent | omit | permit | remit | submit | transmit","send | throw"
+root,"mod | bimodal | commode | commodity | modality | mode | model | modest | modify | modulate","manner | measure | way"
+root,"moder | immoderate | moderate | modern","manner | measure | mode"
+root,"mol | demolish | mole | molecule","heap | mass"
+root,"moll | emollient | mollify | mollusk",soft
+root,"mon | admonish | admonition | monitor | monster | monument | premonition | summon","advise | remind | warn"
+root,"monit | admonition | monition | monitor | premonition","advise | remind | warn"
+root,"mono | monarch | monocle | monogram | monologue","one | single"
+root,"monstr | demonstrate | demonstrative | muster | remonstrate","point out | show"
+root,"mor | sophomore | sophomoric",foolish
+root,"mori | moribund",die
+root,"moron | moronic",stupid
+root,"morph | amorphous | anthropomorphic | metamorphosis | morphine | morphology","form | shape"
+root,"mors | mordacity | morsel | remorse",bite
+root,"mort | immortality | mortal | mortify | rigor mortis",death
+root,"mot | commotion | emotional | momentarily | motivate | motive | motor | promoter | remote",move
+root,"mount | amount | insurmountable | mountaineer | paramount | tantamount","hill | mountain"
+root,"mov | momentum | move | movement",move
+root,"mult | multifarious | multilingual | multiply | multitude","many | much"
+root,"mun | commune | excommunicate | munificent | remunerate","a gift | achievement"
+root,"muni | communicate | communism | immunity","functions | official duties"
+root,"mut | commute | mutable | mutation | mutual | permutation",change
+root,"narr | narrate | narrative | narrator | unnarratable","relate | tell"
+root,"nasc | nascent","be born"
+root,"nat | cognate | good-natured | innate | international | naive | nascent | natal | nationality | nativity | renaissance | supernatural | unnatural",born
+root,"nau | astronaut | nausea | nauseate | nautical","sailor | ship"
+root,"nav | circumnavigate | naval | nave | navigable | navigate | navy",ship
+root,"nec | necrology | necrophobia | pernicious",kill
+root,"necro | necrology | necrophagia | necropsy","dead body | death | kill"
+root,"nect | connection | connectivity | disconnect | interconnect",bind
+root,"neg | abnegation | negative | renegade | renege",deny
+root,"negat | abnegation | negate | negation | negative",deny
+root,"neo | neophyte",new
+root,"neur | neural | neuralgia | neuritis | neurotic",nerve
+root,"nic | pernicious","death | harm"
+root,"nihil | annihilate | nihilism",nothing
+root,"noc | innocent | innocuous | obnoxious","harm | hurt"
+root,"noct | noctambulist | nocturn | nocturnal",night
+root,"nom | binomial | misnomer | polynomial","name | term"
+root,"nom(y) | agronomy | astronomy | autonomy | economy","law | system of laws"
+root,"nomen | nomenclature",name
+root,"nomin | denominate | ignominy | nominate","name | nominal"
+root,"non | nonchalant | nonexistent | nonfiction | nonpartisan | nonsense","not (prefix)"
+root,"nost | nostalgia","a return home"
+root,"not | annotate | connote | denote | notary | notice | notify | notion | notorious",know
+root,"not(a) | annotate | denotation | denote | notable | note",mark
+root,"nounc | announce | denounce | pronounce | renounce","declare | tell"
+root,"nov | innovate | nova | novel | novelty | novice | renovation",new
+root,"nox | noxious | obnoxious",hurt
+root,"null | annul | nullification | nullify","none | nothing"
+root,"numer | enumerate | innumerable | numeral | numerous | supernumerary",number
+root,"nunci | enunciate | nuncio","bring tidings | declare | tell"
+root,"nur | nursary | nurse | nurture","feed | nourish"
+root,"nutr | nurse | nurture | nutriment | nutritious | nutritive","feed | nourish"
+root,"nym | acronym | antonym | eponym | pseudonym | synonym",name
+root,"ob | oblique | obtuse","against | on | over | to | toward"
+root,"oc | occurrence","against | on | over | to | toward"
+root,"oct | octagon | octopus",eight
+root,"octav | octave",eight
+root,"ocul | binoculars | inoculate | monocle | ocular | oculist",eye
+root,"odi | annoy | odious | odium","hate | ill-will"
+root,"ombr | somber | sombrero",shade
+root,"omni | omnibus | omnificent | omnipotent | omnipresent | omniscient | omnivore",all
+root,"ompt | prompt","buy | take"
+root,"oner | exonerate | onerous",burden
+root,"onym | anonymous | homonym | synonym",name
+root,"op | opposite | opposition","against | on | over | to | toward"
+root,"oper | cooperation | opera | operate",work
+root,"operi | cover | covert","cover | hide"
+root,"opt | optical | optician","see | sight"
+root,"opul | opulence | opulent",wealth
+root,"or | adore | inexorable | oracle | oratory | orison | peroration","address | pray"
+root,"orat | adoration | oration | orator | oratory","address | pray | speak"
+root,"ord | primordial","begin | weave"
+root,"ordin | co-ordinate | disorder | inordinate | order | orderly | ordinance | ordinary | ordination | subordinate","arrange | order | rank | regulate"
+root,"orium | auditorium","a place for (suffix)"
+root,"orn | adorn | ornament | ornate | suborn","adorn | furnish"
+root,"ortho | orthodontist | orthodox | orthoepy | orthography","correct | straight"
+root,"oss | osseous | ossification | ossify",bone
+root,"oste | osteopathy | osteoporosis",bone
+root,"pac | compact | pacifist | pacify",peace
+root,"paen | peninsula","almost (prefix)"
+root,"pair | repair","get ready | set"
+root,"paleo | paleontology","ancient (prefix)"
+root,"palp | palpable | palpitate | palpitation",feel
+root,"pan | company | panatella | pancake | pannier | panniers | pantry",bread
+root,"pand | expand","spread out"
+root,"pans | expanse | expansive","spread out"
+root,"par | disparage | disparate | disparity | parimutuel | parity | peer | peerage",equal
+root,"para | parabola | parachute | paradox | paragraph | paraphrase | parasite","at or to one side of | beside | beyond | past by (prefix)"
+root,"pari | apparition","come in sight"
+root,"pars | parcel | parse",part
+root,"part | apartheid | apartment | compartment | depart | impartial | parcel | partial | particle | partisan | partition | portion | repartee | tripartite","divide | part | separate | share"
+root,"pass | compass | encompass | impassable | pace | passage | passenger | passport | password | surpass | trespass",step
+root,"pat | compassion | compatible | impatience | passive | patient","endure | feel | suffer"
+root,"pater | paternity",father
+root,"path | antipathy | apathy | pathetic | pathos | sympathizer | sympathy","feel | suffer"
+root,"patr | expatriate | patriarch | patrician | patriotism | patron | patronize",father
+root,"pau | paucity",few
+root,"peac | peaceful",peace
+root,"peas | appease",peace
+root,"pecc | impeccable | peccable | peccadillo | peccant",sin
+root,"pect | expectorate | pectoral","breast | chest"
+root,"pecu | impecunious | peculate | pecuniary",money
+root,"ped | pedagogue | pedagogy | pedantic | pediatrician",child
+root,"peer | peerage",equal
+root,"pel-pell | compel | dispel | expel | repel | repellent","drive | urge"
+root,"pel/pul | expulsion | propel | pulsate | repulsive","drive | urge"
+root,"pell | pelisse | pell | pellicle | pelt | surplice","fur | skin"
+root,"pen | impune | impunity | penal | penalty | penitent | punish | repent | subpoena","pain | punishment"
+root,"pend | append | expend | impending | pendent | pendulum | stipend | suspend","hang | pay | weigh"
+root,"pens | compensate | dispense | inexpensive | pension | pensive | propensity | suspension","hang | pay | weigh"
+root,"penta | pentagon | pentathlon","five (prefix)"
+root,"per | perceive | perfect | perturb | peruse | pervade | pervert","thoroughly | through | utterly | very (prefix)"
+root,"peri | perigee | perimeter | peripheral","around (prefix)"
+root,"pet(it) | appetite | compete | competent | competitor | impetuous | impetus | perpetual | petition | petulant | propitious | repeat","ask | attack | fall | rush at | seek | strive"
+root,"petr | peter | petrify | petroleum | pier","rock | stone"
+root,"phan | diaphanous | epiphany | fancy | fantastic | fantasy | phantom","appear | bring to light | show"
+root,"phen | phenomena | phenomenal | phenomenon","appear | shine | show"
+root,"phil | bibliophile | francophile | philanderer | philanthropy | philatelist | philodendron | philology | philosophy | philter","fond | loving"
+root,"phobia | acrophobia | claustrophobia | hydrophobia | xenophobia",fear
+root,"phon | cacophony | euphonious | megaphone | phonic | symphony | telephone",sound
+root,"phor | metaphor | phosphorus | semaphore","bringing | carry"
+root,"phos | phosphorous",light
+root,"phot | photogenic | photography | photon",light
+root,"physi | physics | physiography | physiologist | physiology","natural science | nature"
+root,"pict | depict | picture | picturesque",paint
+root,"plac | complacent | displeasure | implacable | placate | placebo | placid | pleasant",please
+root,"plaud | applaud | explode | plaudit | plausible","clap | strike"
+root,"plaus | plausible","clap | strike"
+root,"ple | complement | complementary | complete | completion | implement | supplement",fill
+root,"plen | plenary | plenty | replenish",fill
+root,"plet | complete | depletion | expletive | plethora | replete","fill | full"
+root,"pli | apply | compliant | imply | pliable | reply | suppliant","bend | fold"
+root,"plic | accomplice | applicant | complicity | duplicate | explicate | explicit | implement | implicate | implicit | imply | multiplication | replica | simplicity | supplicate","bend | embrace | fold"
+root,"plod | explode | implode",clap
+root,"plor | deplore | exploration | implore","cry out | wail"
+root,"ploy | deployment",fold
+root,"plur | plural | plurality",more
+root,"ply | imply",fold
+root,"pneuma | pneumatic","air | breath | wind"
+root,"pneumon | pneumonia","breath | lung"
+root,"pod | chiropodist | podiatrist | podium | tripod",foot
+root,"poign | poignant","point | prick"
+root,"pol | apology | interpolate | polish | polite","make sooth"
+root,"polis | acropolis. necropolis | megalopolis | metropolis",city
+root,"poll | poll | poll tax | pollster","(hair of the) head | top of the tree"
+root,"poly | polygamy | polyhedron | polymer | polynomial","many (prefix)"
+root,"pon | component | exponent | opponent | postpone","place | put"
+root,"popul | populace | popular | populate",people
+root,"port | comport | deport | export | import | opportune | portable | portage | porter | portfolio | portico | portmanteau | purport | report | support | transport","bear | bring | carry"
+root,"portio | apportion | portion | proportion","part | share"
+root,"pos | expose | juxtapose | proposition | repository","place | put"
+root,"posit | composition | deposit | impose | imposition | impostor | repository","place | put | settle"
+root,"poss | dispossess | posse | possessive | possibility","be able | have power"
+root,"post | posterity | posthumous | postpone | preposterous","after (prefix)"
+root,"poster | anterior | posterior | posterity | preposterous","coming after | following"
+root,"pot | potable | potation | potion | pottage",drink
+root,"potent | impotent | omnipotent | potent | potentate | potential","potent | powerful"
+root,"pov | impoverish | poverty",poor
+root,"pre | precaution - 6 | predict - 5 | predominant - 6 | prejudice-5 | premature - 8 | preoccupation - 8 | presume - 7 | prevail - 7","before | in advance (prefix)"
+root,"preci | appreciation | depreciate | praise | precious","price | value"
+root,"prehend | apprehend | apprehensive | comprehend | reprehensible","grasp | seize | take"
+root,"press | compress | depressive | expressive | impression | pressure","press | strain"
+root,"preti | appraise | appreciable | appreciation | depreciate",price
+root,"prim | primarily | primer | primeval | primitive | primogeniture",first
+root,"pris | comprise | enterprise | prison | reprisal | surprise","grasp | hold | seize"
+root,"priv | deprive | privacy | private | privilege | privy","deprive | separate | single"
+root,"pro | proclaim - 6 | prognosticate - hs | progressive - 7 | projection - 8 | promotion - 8 | proposal - 7 | prospect - 5 | provoke - 7","before | forward | in favor of (prefix) | in front of"
+root,"prob | probity","excellent | honest"
+root,"propri | appropriate | proper | property | proprietary | propriety","one's own | peculiar | select"
+root,"proto | protagonist | protocol | protoplasm | prototype | protozoan",first
+root,"provis | provision | proviso",provide
+root,"proxim | approximate | proximity | proxy","nearest | very near"
+root,"prud | jurisprudence | provide | prude | prudent",foresee
+root,"psych | psychic | psychoanalysis | psychology | psychopath","mind | soul | spirit"
+root,"public | publicize | republic","of the people | public"
+root,"pud | impudent | repudiate","blush | feel shame"
+root,"pugn | impugn | pugilism | pugilist | pugnacious | repugnant",fight
+root,"puls | compulsive | compulsory | expulsion | impulsive | pulse | repulsion","drive | urge"
+root,"pun | impunity | punitive","pain | punishment"
+root,"punct | compunction | punctilious | punctual | punctuate | puncture","point | prick"
+root,"pung | expunge | pungent","point | prick"
+root,"put | amputate","cleanse | lop off | prune | trim"
+root,"pyr | empyrean | pyre | pyromania | pyrometer | pyrosis | pyrotechnics",fire
+root,"quadr | quadrangle | quadrant | quadrilateral | quadrille | quadruped | quadruple | squadron","fourfold | square"
+root,"quaint | acquaint | acquaintance | quaint | reacquaint",know
+root,"qual | qualify | quality","of what sort or kind"
+root,"quarant | quarantine",forty
+root,"quart | quarter | quarterly | quartet",fourth
+root,"quer | conquer | querulous | query","ask | seek"
+root,"quest | conquest | inquest | questionable | questionnaire | request","ask | seek"
+root,"quies | acquiesce | acquiescence | quiescent","quiet | rest"
+root,"quiet | acquit | quietness | quietude | requite | tranquil","quiet | rest"
+root,"quint | quinta | quintet | quintile | quintuple",five
+root,"quir | acquire | enquire | exquisite | inquisitive | perquisite | require","ask | seek"
+root,"quir/quis | acquire | exquisite | inquisitive | require","ask | seek"
+root,"quis | conquistador | exquisite | inquisitive | perquisite","ask | seek"
+root,"quit | acquittal","quiet | rest"
+root,"quot | quota | quotation | quote | quotient","how many"
+root,"rab | rabble | rabid | rage","madness | rage"
+root,"radi | irradiate | radiant | radioactivity | radius","ray | shine"
+root,"radic | eradicate | radical | radicchio | radish",root
+root,"ram | ramification | ramify",branch
+root,"rap | rapacious | rapid | rapidity | rapine","grasp | seize"
+root,"rapt | raptores | rapture",seize
+root,"ras | abrasion | erase | rase | rasorial | razor",scrape
+root,"rat | rate | ratification | ratify | ratio | ration | rational","calculate | determine | settle | think"
+root,"rav | ravine | ravish","bear away"
+root,"raz | razor",scrape
+root,"re | rebellious - 7 | recognition - 6 | reflect - 5 | rehabilitation - 8 | reliable - 6 | respiration - 8 | reunion - 7 | revive - 6","again | back (prefix)"
+root,"rect | correct | direct | erect | rectangle | rectify | rectitude | rector","right | ruled | straight"
+root,"refer | referee | reference | referendum | relate","bring back | carry back"
+root,"reg | regalia | regency | regent | regimen | regiment | region | regional","govern | rule"
+root,"regis | register | registrable","list | matters recorded"
+root,"regul | regular | regulate","a rule"
+root,"relat | correlate | correlation | relation","bring back | carry back"
+root,"relatio | relationship","carry back"
+root,"rend | render | rendezvous | surrender","give up"
+root,"rept | reptile | surreptitious","creep | seize | snatch"
+root,"retro | retroactive","backward (prefix)"
+root,"rever | revere | reverence | reverend","to stand in awe of; fear"
+root,"rid | deride | ridicule | ridiculous",laugh
+root,"ris | derision | derisory | risible",laugh
+root,"riv | derivation | derive | rival | rivulet","brook | stream"
+root,"rod | corrode | corrosion | erode | erosion | rodent","eat | gnaw"
+root,"rog | abrogate | arrogant | interrogate | rogue | surrogate","ask | demand"
+root,"rogat | abrogate | derogatory | interrogate | prerogative | surrogate","ask | demand"
+root,"rot | rotary | rotate | rototiller",wheel
+root,"rou | rouge",red
+root,"roy | corduroy | pomeroy | royalty | viceroy","king | rule"
+root,"rub | erubescent | rubella | rubicund | rubric | ruby",red
+root,"rud | erudite | rude | rudiment | rudimentary","crude | raw | rough"
+root,"rupt | abrupt | bankrupt | corrupt | disrupt | erupt | interruption | rupture","break | burst"
+root,"sacr | consecrate | desecrate | sacrament | sacred | sacrifice | sacrilege","holy | sacred"
+root,"sag | presage | sagacious | sagacity | sage | sagittarius","perceive | seek out"
+root,"sain | saintly","holy | sacred"
+root,"sal | salad | salary | saline | salinity | salinization | saltwater",salt
+root,"salut | salubrious | salutary | salute",health
+root,"salv | salvage | salvation | salve",save
+root,"san | sanatory | sanitarium | sanity",heal
+root,"sanct | sanctify | sanctimony | sanction | sanctity | sanctuary","holy | sacred"
+root,"sangui | consanguinity | sangfroid | sanguinary | sanguine",blood
+root,"sanit | sanitarium | sanitary | sanitation | sanitize | sanity",health
+root,"sap | insipid | sapid | sapien | sapient | savor","taste | to be wise"
+root,"satis | insatiable | satiate | satisfaction | satisfy | saturate | unsatisfactory","enough | sufficient"
+root,"satur | saturate | unsaturated",enough
+root,"sault | assault | exult | insult | result | somersault","leap | spring forward"
+root,"scend | ascend | condescend | descend | transcend",climb
+root,"sci | conscientious | conscious | omniscient | plebiscite | prescience | science | scientific | subconscious | unconscionable",know
+root,"scope | gyroscope | horoscope | periscope | stethoscope","see | watch"
+root,"scrib | ascribe | describe | inscribe | prescribe | proscribe | scribble | subscribe | transcribe",write
+root,"script | conscript | descriptive | inscription | script | scripture. postscript | subscription | transcript",write
+root,"scrut | inscrutable | scrutiny","examine | search into carefully"
+root,"scur | obscure","conceal | cover"
+root,"se | secede | sedition | seduce | segregate | sequester","apart | without (prefix)"
+root,"sec | secondary",follow
+root,"sect | dissect | insect | intersect | secant | section",cut
+root,"secu/sequ | consecutive | inconsequential | prosecute | sequel",follow
+root,"secut | consecutive | execute | persecute | prosecute",follow
+root,"sed | sedate | sedentary | sediment | supersede","settle | sit"
+root,"self | selfish","by oneself (prefix)"
+root,"sell | consulate | consult | consultancy | consultation","sees | take"
+root,"sembl | assembly | dissemble | reassemble | resemble | semblance","appear | be like | seem"
+root,"semi | semester | semicolon | semiconscious | semiprecious | semiskilled",half
+root,"semin | disseminate | seminal | seminar | seminary","seed | sow"
+root,"sen | senate | senescent | seneschal | senile | senior | sire",old
+root,"sens | consensus | nonsense | sensation | sense | sensible | sensory | sensual","feel | perceive | think"
+root,"sent | assent | consent | dissent | presentiment | resent | sentence | sentiment","be aware | feel | think"
+root,"sequ | consequent | obsequious | sequel | sequence | sequester | subsequent",follow
+root,"ser | dissertation | serial | serialize | series","a row | bind | connect | join | order | put"
+root,"seri | serious","grave | serious"
+root,"sert | assert | concert | desert | dissertation | exert | insert","bind | join | put"
+root,"serv | conservation | conservatory | deserve | observe | preserve | reserve","keep | protect | serve"
+root,"sesqui | sesquicentennial | sesquipedalian","one and a half"
+root,"sess | obsession | session","be still | sit"
+root,"sever | asseverate | perseverance | persevere | severe | severity","grave | serious | strict"
+root,"sext | sexagenarian | sextant | sextuple",sixth
+root,"sid | assiduous | dissident | insidious | preside | presidency | residue | subside | subsidy","settle | sit"
+root,"sider | consider | consideration | reconsider",star
+root,"sign | assignment | designate | designer | insignia | insignificant | resignation | signal | signature | signify",mark
+root,"silic | silicate | silicify",flint
+root,"simil | assimilate | dissimilar | similarity | simile | simulate","like | make like | together"
+root,"simul | simulate | simultaneous","at the same time | make like"
+root,"sinu | cosine | insinuate | sinuous","bend | curve | fold"
+root,"sipa | dissipate",throw
+root,"sir | desiderate | desirous | undesirable","heavenly body | star"
+root,"sist | assist | consist | desist | exist | insist | persist | resist | subsist","place | to stand"
+root,"soci | associate | association | socialism | society | sociologist","companion | partner"
+root,"sol | parasol | solar | solstice","the sun"
+root,"solut | absolute | dissolute | resolution | soluble | solution",loosen
+root,"solv | absolve | dissolve | insolvent | resolve","loosen | release"
+root,"somn | insomnia | somnambulist | somnolence | somnolent",sleep
+root,"son | consonant | dissonance | resonance | sonata | sonorous | unison",sound
+root,"soph | philosopher | philosophy | sophistication | sophistry","wisdom | wise"
+root,"sort | assort | assortment | consort | sorcerer | sorcery | sort","kind | lot"
+root,"sorti | resort","escape | go out | leave"
+root,"spe(r) | prosper | prosperity",hope
+root,"speci | special | species | specify | spice","kind | sort"
+root,"spect | circumspect | expectant | expectorant | expectorate | inspection | perspective | respect | species | specimen | spectacle | spectator | spectrum","appear | look | see"
+root,"sper | aspersion | disperse | intersperse","scatter | sprinkle | strew"
+root,"sphere | atmosphere | hemisphere | spherical | spheroid | stratosphere",sphere
+root,"spic | conspicuous | despicable | inauspicious | perspicuity | suspicious","look at | see"
+root,"spir | aspire | conspire | expire | inspire | perspire | respiration | spirit | transpire",breathe
+root,"spond | correspondence | despondency | despondent | respond","answer | pledge | promise"
+root,"spons | response | responsible | sponsor | unresponsive","answer | promise"
+root,"sta | constant | ecstasy | establish | obstacle | stability | stamina | standard",stand
+root,"stant | circumstance | constant | distant | instant | stanchion | stanza | substance",stand
+root,"stat | state | statue | stature | status",stand
+root,"statut | constitute | destitute | institute | statute | substitute","establish | place | put | set | stand"
+root,"stell | constellation | stellar",star
+root,"stereo | stereophonic | stereotype",solid
+root,"stern | sternum | stratosphere | stratum | substrate","spread (out) | stretch out"
+root,"stigm | stigma | stigmatize","brand | mark | prick"
+root,"stimul | stimulant | stimulate | stimulation","excite | prick"
+root,"stinc | distinctive | instinct","brand | mark | prick"
+root,"stingu | distinguishable | extinguish","pierce | prick | quench"
+root,"stit | constituent | destination | destitute | institution | obstinate | solstice | substitute | superstition | superstitious",stand
+root,"strain | constraint | restrain","bind | draw tight"
+root,"stri | industrious",build
+root,"strict | boa-constrictor | constrict | district | restrict | strict","bind | draw tight"
+root,"string | astringent | stringent","bind | draw tight"
+root,"strix | strident | stridor | stridulate","screech owl"
+root,"strophe | apostrophe | catastrophe | catastrophic","a twist | turn"
+root,"stru | construe | instrument","arrange | build"
+root,"struct | construction | destructive | instruct | obstruct | structure","arrange | build"
+root,"stup | stupefy | stupendous | stupid","be amazed"
+root,"suad | assuage | dissuade | persuade | persuasive | suave","persuade | recommend"
+root,"suav | suave",sweet
+root,"sub | subconscious - 8 | subdue - 7 | submarine - 6 | submission - 8 | subscribe - 7 | substance - 6 | subterranean - 6 | suppress - 7","below (prefix) | under"
+root,"suf | sufficient","below | from under (prefix)"
+root,"sult | consultation | desultory | exult | exultant | insult | result","leap | spring forward"
+root,"sum | assume | consume | presume | resume",take
+root,"summ | consummate | summit",highest
+root,"sumpt | assumption | consumption | presume",take
+root,"sumptu | sumptuary | sumptuous",expense
+root,"sup | support | suppress","down | under"
+root,"super | sovereign | superb | superficial | superior | supernatural | supreme","above | over"
+root,"sur | surface | surfeit | surpass | surrender | surround","above | in addition (prefix) | over | upon"
+root,"surg | insurgent | resurgent | source | surge",rise
+root,"surrect | insurrection | resurrection",rise
+root,"sus | susceptible | suspect | suspend | sustain","below | under"
+root,"sym | symbiosis | symbol | symmetrical | symmetry | sympathetic | symphony | symposium","together (prefix)"
+root,"syn | synchronize | syncopation | syndicate | synonym | synonymous | synopsis | syntax | synthesis | synthesizer | synthetic","together | with (prefix)"
+root,"tac | reticent | tacit. taciturn","be silent"
+root,"tact | contact | intact | tactful | tactile",touch
+root,"tag | tactical | tactician | tactics","arrange | put in order"
+root,"tain | detain | entertain | maintain | obtain | pertain | retain | sustain",hold
+root,"tali | retaliation","compensation in kind"
+root,"tang | contagious | contiguous | contingent | tangent | tangential | tangible | taxable",touch
+root,"tard | retard | retardant | tardy",slow
+root,"tast | distasteful | tasteless",touch
+root,"techn | pyrotechnics | technical | technology",art
+root,"tect | detect | protection | toga","cover | protect"
+root,"teg | disintegrate | integer | integral | integrate | integrity",touch
+root,"tege | protect | protege","cover | protect"
+root,"tele | telepathy | telephone | telescope",far
+root,"temn | contempt | contemptible | contemptuous","scorn | slight"
+root,"templ | contemplate | contemplation | contemplative",temple
+root,"tempor | contemporary | extemporaneous | temporal | temporary | temporize",time
+root,"ten | content | detention | lieutenant | retentive | tenacious | tenacity | tenant | tenet | tenor | tenure | untenable","hold | keep"
+root,"tend | attend | bartender | distend | extend | portend | pretend | superintend | tendency | tender | tendon","reach | stretch"
+root,"tens | hypotenuse | intensity | pretense | tense | tensile | tension","strain | stretch"
+root,"tent | attention | contentious | detente | detention | intent | ostentation | unpretentious","reach | stretch"
+root,"tenu | attenuate | extenuate | tenuity | tenuous","make thin"
+root,"termin | determine | exterminate | terminal | terminology","boundary | end | limit"
+root,"terr | inter | subterranean | terrain | terrestrial | territory","earth | ground | land"
+root,"test | attest | contest | detest | intestate | protest | testify | testimony",witness
+root,"testat | intestate | testament | testator","make a will"
+root,"text | context | pretext | textile | texture","a web | plaited | texture | woven"
+root,"the | atheist",God
+root,"therm | isotherm | thermal | thermocouple | thermometer | thermos | thermostat","heat | warm"
+root,"tic | reticent","be silent"
+root,"tig | contiguous","contact | touch"
+root,"tim | intimidate | timid | timidity | timorous",fear
+root,"tin | abstinence | continent | discontinuity | impertinent | pertinent","hold | keep"
+root,"ting | contingency | contingent","contact | touch"
+root,"toler | tolerance","bear | put up with"
+root,"tom | anatomy | atom | dichotomy | epitome | lobotomy | tome | tracheotomy",cut
+root,"tomy | appendectomy | dichotomy | lithotomy | lobotomy | tracheotomy","cutting | incision"
+root,"ton | astonish | detonate","thunder | tone"
+root,"torn | attorney | tornado | tornillo","thunder | turn"
+root,"torp | torpid | torpor","numb | stiff"
+root,"torr | toast | torrent | torrential | torrid | torridly","burn | dry | parch"
+root,"tort | contort | contortionist | extort | retort | torch | torment | tortoise | tortuous","twist | wring"
+root,"tox | antitoxin | endotoxin | intoxicate | toxic | toxicology",poison
+root,"tract | abstract | attractive | contract | distraction | distraught | entreat | intractable | portrait | portrayal | protract | retraction | traction","draw | pull"
+root,"trad | betray | tradition | traitor","betray | deliver"
+root,"trah | portray | train",draw
+root,"trans | transact | transatlantic | transcend | transfer | transform | translate | transmit | transport | traverse","across (prefix)"
+root,"treat | entreat | mistreatment | retreat | treatise | treaty","draw | handle"
+root,"trem | tremble | tremendous | tremor",tremble
+root,"trepid | intrepid | trepidation","agitated | trembling"
+root,"tri | triad | triangle | trident | triennial | trio | triple | tripod | trivial",three
+root,"trib | or diatribe | tribal | tribune","OR waste away | family | race"
+root,"tribut | attribute | contribute | distribute | retribution | tributary | tribute","allot | allow | assign | pay"
+root,"tric | intricacy | intricate | intrigue | trick | trickery","entangle | make trouble"
+root,"trop | heliotrope | trophy | tropical",turn
+root,"trud | extrude | intrude | protrude","push | thrust"
+root,"trus | abstruse | unobtrusive","push | thrust"
+root,"tuit | intuition | intuitive | tuition | tutelage | tutor","look after | protect | watch"
+root,"tun | stunning","pound | shake | thump | thunder"
+root,"turb | disturb | perturb | turbid | turbine | turbulent","disturb | drive | throw in disorder"
+root,"tus | contusion | obtuse",strike
+root,"tut | tutelage | tutor | tutorial","look after | protect | watch"
+root,"typ | archetype | prototype | type | typical","form | impression | model"
+root,"uber | exuberance | exuberant","bear abundantly"
+root,"ultim | penultimate | ultimate | ultimatum",last
+root,"ultra | ultraliberal | ultramodern | ultrasound | ultrasuede | ultraviolet","beyond (prefix)"
+root,"umbr | adumbrate | penumbra | umbrage | umbrella","shade | shadow"
+root,"un | unanimous - 7 | unattractive - 8 | unconscious - 6 | unfinished - 6 | unnecessary - 6 | unpredictable - 7 | unravel - 5 | unworthy - 8","none (prefix) | not"
+root,"und | abound | abundance | inundate | redound | redundant | undulate","be excessive | flow | overflow | wave"
+root,"under | underground | understand","beneath (prefix)"
+root,"uni | reunion | unanimous | uniformity | unify | unilateral | unionize | unique | unison | unite | university",one
+root,"urb | suburb | urban | urbane","city | town"
+root,"urgy | metallurgy | zymurgy","producing (suffix) | working with"
+root,"us | abuse | abusive | peruse | usurious | usurp",use
+root,"ut | utensil | utilitarian | utility | utilize",use
+root,"util | utilitarian | utility | utilize","use | useful"
+root,"vac | evacuate | vacancy | vacate | vacation | vacuous | vacuum","at leisure | empty"
+root,"vad | evade | invade | invasion | pervade","advance | go"
+root,"vag | extravaganza | vagabond | vagrant | vague",wander
+root,"vail | avail | available | countervail | prevail","be strong | be worth"
+root,"val | equivalent | evaluate | invalid | valiant | valid | valor | value","be strong | be worth"
+root,"van | evanescent | vanish | vanity","empty | vain"
+root,"vanq | vanquish",conquer
+root,"var | prevaricate | variegate | variety | varus | vary","bend | turn"
+root,"vari | variation | variegated | variety | various","diverse | of many kinds"
+root,"vas | evasion | evasive | invasion","advance | go"
+root,"vast | devastate | devastation","lay waste"
+root,"veh | inveigh | vehement | vehicle | vein","bring | carry"
+root,"vel | reveal | revelation | revelator | veil","cover | veil"
+root,"veloc | velocipede | velocity | velodrome","speed | swift"
+root,"velop | development | envelop","cover | wrap"
+root,"ven | convene | convenient | covenant | intervene | revenue | souvenir | venue",come
+root,"vent | advent | adventure | convention | eventful | invent | prevention | venture",come
+root,"ver | aver | veracious | veracity | verdict | verify | verisimilitude | verity","true | truth"
+root,"verb | adverb | proverbial | verbal | verbatim | verbiage | verbose",word
+root,"verd | verdant | verdigris | verdure","be green | flourish"
+root,"verer | revered | reverence | reverencer","fear | stand in awe of"
+root,"vers | adversary | adverse | adversity | anniversary | averse | controversy | conversation | diverse | diversified | inverse | perverse | reverse | traverse | universal | universe | university | versatility | verse | version | versus",turn
+root,"vert | advertise | advertisement | avert | convert | divert | extrovert | introvert | invert | revert | subvert | vertebra | vertebrate | vertex | vertical | vertigo | vortex",turn
+root,"vest | divest | invest | travesty | vestment","clothe | dress | garment"
+root,"veter | veteran | veterinarian",old
+root,"vi | deviate | devious | impervious | obviate | obvious | previous | viaduct","road | way"
+root,"via | trivial | viaduct",way
+root,"vic | vicar | vicissitude","a change | turn"
+root,"vict | conviction | evict | victim | victimize | victor",conquer
+root,"vid | evident | invidious | provide | providential","appear | see"
+root,"vig | invigorate | vigil | vigilance","lively | vigor"
+root,"vil | revile | vilify","base | mean"
+root,"vin | vinification | vinous | vintage | vintner",wine
+root,"vinc | convince | evince | invincible | provincial | vanquish",conquer
+root,"vir | triumvirate | virago | virile | virtual | virtuoso",man
+root,"viron | environmental | environs","a circle"
+root,"viru | virulent | virus",poison
+root,"vis | improvise | provisional | proviso vista | revise | visionary | visor | visual","appear | see"
+root,"vit | revitalize | vital | vitality | vitamin","alive | life"
+root,"viv | revive | survive | vivacious | vivacity | vivify | viviparous | vivisection","alive | life"
+root,"voc | advocate | equivocal | evoke | irrevocable | provoke | revoke | vocabulary | vocalize | vocation | vociferous","call | voice"
+root,"vol | benevolent | involuntary | malevolent | volition | volunteer","will | wish"
+root,"volu | convoluted | evolution | revolting | revolutionary | voluble | volume | voluminous","roll | turn"
+root,"volv | devolve | evolve | involve | revolver","roll | turn"
+root,"vor | carnivore | herbivore | voracious",devour
+root,"vot | devotee | devotional | devout | votary | voter | votive","a wish | vow"
+root,"vour | devour",eat
+root,"voy | convey | convoy | envoy | invoice | voyage",way
+root,"vulcan | vulcanize",fire
+root,"vuls | convulse | convulsion | revulsion | vulture","pluck | tear"
+root,"was | wassail","be hale (Old English)"
+root,"zo | zodiac | zoography | zoology | zoophyte",animal

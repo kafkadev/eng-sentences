@@ -10,9 +10,8 @@
                     <button type="button" class="btn btn-sm btn-outline-secondary">Local</button>
                 </div>
                 <div class="form-group mb-0 mr-10" style="margin-right: 10px;">
-                    <select class="custom-select" v-model="queryText" @change="getWordList(queryText)">
+                    <select class="custom-select" v-model="queryText">
                         <option value="">Select a Category</option>
-                        <option v-for="(item, key) in categories">{{item}}</option>
                     </select>
 
                 </div>
@@ -41,85 +40,10 @@ module.exports = {
         }
     },
     computed: {
-        getData() {
-            this.words = [];
-            if (this.$route.query && this.$route.query.text) {
 
-                this.queryText = this.$route.query.text
-                setTimeout(() => {
-                    this.$root.all_words[queryText]
-                }, 100);
-
-            }
-            return true;
-        }
     },
     methods: {
-        getWordList(cat, type = 0) {
-            this.words = [];
 
-            if (cat && !type) {
-                setTimeout(() => {
-                    if (cat == 'irregular_verbs') {
-
-                        this.words = _.flatten(_.values(this.$root.all_words[this.queryText]).map(val => val.join(' | ')))
-                    }
-                    else if (cat == 'units_of_time') {
-
-                        this.words = _.flatten(_.values(this.$root.all_words[this.queryText]))
-                    }
-                    else if (['compounds','general_verbs','pairs','personal_pronouns','possessive_pronouns', 'state_verbs'].includes(cat)) {
-
-                        this.words = _.flatten(this.$root.all_words[this.queryText].map(val => _.values(val).join(' | ')))
-                    }
-
-                    else if (['units_of_time','proverbs'].includes(cat)) {
-
-                        this.words = _.flatten(_.values(this.$root.all_words[this.queryText].map(val => _.values(val))))
-                    }
-                    else if (['word_clues'].includes(cat)) {
-                        var sources = this.$root.all_words[this.queryText];
-                        this.words =   _.keys(sources).map(key => key + ': ' + sources[key].join(' | ') )
-
-
-                    }
-                    else {
-                      this.words = this.$root.all_words[this.queryText]
-                  }
-                //  console.log(this.$root.all_words[this.queryText])
-              }, 100);
-
-            } else{
-                                   if (cat == 'irregular_verbs') {
-
-                        return _.flatten(_.values(this.$root.all_words[cat]).map(val => val.join(' | ')))
-                    }
-                    else if (cat == 'units_of_time') {
-
-                        return _.flatten(_.values(this.$root.all_words[cat]))
-                    }
-                    else if (['compounds','general_verbs','pairs','personal_pronouns','possessive_pronouns', 'state_verbs'].includes(cat)) {
-
-                        return _.flatten(this.$root.all_words[cat].map(val => _.values(val).join(' | ')))
-                    }
-
-                    else if (['units_of_time','proverbs'].includes(cat)) {
-
-                        return _.flatten(_.values(this.$root.all_words[cat].map(val => _.values(val))))
-                    }
-                    else if (['word_clues'].includes(cat)) {
-                        var sources = this.$root.all_words[cat];
-                        return   _.keys(sources).map(key => key + ': ' + sources[key].join(' | ') )
-
-
-                    }
-                    else {
-                      return this.$root.all_words[cat]
-                  }
-            }
-
-
-        },
         getWords() {
 
           fetch(this.$root.apiUrl + '/getFavoriteWords')
@@ -128,7 +52,7 @@ module.exports = {
           })
           .then((data) => {
             this.categories = _.keys(this.$root.all_words).sort()
-            this.words = _.pluck(data, 'word').reverse()
+            this.words = _.pluck(data, 'text').reverse()
            // console.log(data)
         });
 
@@ -137,13 +61,7 @@ module.exports = {
   },
 
   created() {
-let demosa = {}
-_.keys(this.$root.all_words).map((key) => {
-demosa[key] = this.getWordList(key, 1).map((value, keya) => key + ';' + value)
-})
-//setTimeout(() => console.log(demosa), 5000)
 
-setTimeout(() => localStorage.setItem('data01', JSON.stringify(demosa)), 5000)
     this.getWords()
 }
 }

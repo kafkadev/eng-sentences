@@ -1,5 +1,8 @@
 var Main = httpVueLoader('./vue/main.vue')
+var Dashboard = httpVueLoader('./vue/Dashboard.vue')
 var User = httpVueLoader('./vue/user.vue')
+var SiteTop = httpVueLoader('./vue/SiteTop.vue')
+var SiteFooter = httpVueLoader('./vue/SiteFooter.vue')
 var Sidebar = httpVueLoader('./vue/sidebar.vue')
 var SentencesTable = httpVueLoader('./vue/list_sentences_table.vue')
 var WordButtons = httpVueLoader('./vue/list_words_buttons.vue')
@@ -22,25 +25,65 @@ var TranslateSubtitle = httpVueLoader('./vue/translate_subtitle.vue')
 var TranslateRaw = httpVueLoader('./vue/translate_raw.vue')
 var Erken = httpVueLoader('./vue/erken.vue')
 var NamedWrapper = httpVueLoader('./vue/named.vue')
+var RightTable = httpVueLoader('./vue/RightTable.vue')
+var LeftTable = httpVueLoader('./vue/LeftTable.vue')
+var SourceLongSentences = httpVueLoader('./vue/SourceLongSentences.vue')
+var BlogSources = httpVueLoader('./vue/BlogSources.vue')
+var TopWords = httpVueLoader('./vue/TopWords.vue')
+
+
+alertify.defaults.transition = "slide";
+alertify.defaults.theme.ok = "btn btn-primary";
+alertify.defaults.theme.cancel = "btn btn-danger";
+alertify.defaults.theme.input = "form-control";
+Vue.prototype.alertify = window.alertify;
+
+
+Vue.mixin({
+    data() {
+        return {
+            apiUrl: '/api',
+        }
+    },
+    components: {
+        LeftTable,
+        RightTable,
+        SiteTop,
+        SiteFooter,
+        Sidebar,
+        SentencesTable,
+        WordButtons,
+        NavList
+    },
+    methods: {
+
+    }
+})
+
+
+
+
+
+
 
 
 if (!location.host.split(".").includes("test")) {
     if (!window.console) window.console = {};
     var methods = [
-        "log",
-        "debug",
-        "warn",
-        "info",
-        "error",
-        "trace",
-        "dir",
-        "dirxml",
-        "group",
-        "groupEnd",
-        "time",
-        "timeEnd",
-        "assert",
-        "profile",
+    "log",
+    "debug",
+    "warn",
+    "info",
+    "error",
+    "trace",
+    "dir",
+    "dirxml",
+    "group",
+    "groupEnd",
+    "time",
+    "timeEnd",
+    "assert",
+    "profile",
     ];
     for (var i = 0; i < methods.length; i++) {
         console[methods[i]] = function() {};
@@ -52,82 +95,97 @@ if (!location.host.split(".").includes("test")) {
 
 /* Router and App setup: */
 var routes = [{
-        path: '/post/:post_id',
-        name: 'posts',
-        props: true,
-        component: Post
-    },
-    {
-        path: '/',
-        name: 'home',
-        props: true,
-        component: SourceNews
-    }, {
-        path: '/SourceSubtitle',
-        name: 'SourceSubtitle',
-        props: true,
-        component: SourceSubtitle
-    },
-    {
-        path: '/search',
-        name: 'SearchWord',
-        component: SearchWord
-    },
-    {
-        path: '/search-outsource',
-        name: 'SearchWordOutsource',
-        component: SearchWordOutsource
-    },
-    {
-        path: '/source_dictionary',
-        name: 'SourceDictionary',
-        component: SourceDictionary
-    },
-    {
-        path: '/translate-link',
-        name: 'TranslateLink',
-        component: TranslateLink
-    },
-    {
-        path: '/translate-subtitle',
-        name: 'TranslateSubtitle',
-        component: TranslateSubtitle
-    },
-    {
-        path: '/translate-raw',
-        name: 'TranslateRaw',
-        component: TranslateRaw
-    },
-    {
-        path: '/source-news',
-        name: 'SourceNews',
-        component: SourceNews
-    },
-    {
-        path: '/source-articles',
-        name: 'SourceArticles',
-        component: SourceArticles
-    },
-    {
-        path: '/source-files',
-        name: 'SourceFiles',
-        component: SourceFiles
-    },
-    {
-        path: '/source-video',
-        name: 'SourceVideo',
-        component: SourceVideo
-    },
-    {
-        path: '/source_favorite_words',
-        name: 'SourceFavoriteWords',
-        component: SourceFavoriteWords
-    },
-    {
-        path: '/source_favorite_sentences',
-        name: 'SourceFavoriteSentences',
-        component: SourceFavoriteSentences
-    }
+    path: '/post/:postId',
+    name: 'post',
+    props: true,
+    component: Post
+},
+{
+    path: '/',
+    name: 'home',
+    props: true,
+    component: Dashboard
+}, {
+    path: '/SourceSubtitle',
+    name: 'SourceSubtitle',
+    props: true,
+    component: SourceSubtitle
+},
+{
+    path: '/search',
+    name: 'SearchWord',
+    component: SearchWord
+},
+{
+    path: '/TopWords',
+    name: 'TopWords',
+    component: TopWords
+},
+{
+    path: '/BlogSources',
+    props: true,
+    name: 'BlogSources',
+    component: BlogSources
+},
+{
+    path: '/SearchWordOutsource',
+    name: 'SearchWordOutsource',
+    component: SearchWordOutsource
+},
+{
+    path: '/SourceDictionary',
+    name: 'SourceDictionary',
+    component: SourceDictionary
+},
+{
+    path: '/TranslateLink',
+    name: 'TranslateLink',
+    component: TranslateLink
+},
+{
+    path: '/TranslateSubtitle',
+    name: 'TranslateSubtitle',
+    component: TranslateSubtitle
+},    {
+    path: '/SourceLongSentences',
+    name: 'SourceLongSentences',
+    component: SourceLongSentences
+},
+{
+    path: '/TranslateRaw',
+    name: 'TranslateRaw',
+    component: TranslateRaw
+},
+{
+    path: '/SourceNews',
+    name: 'SourceNews',
+    component: SourceNews
+},
+{
+    path: '/SourceArticles',
+    name: 'SourceArticles',
+    component: SourceArticles
+},
+{
+    path: '/SourceFiles',
+    name: 'SourceFiles',
+    component: SourceFiles
+},
+{
+    path: '/SourceVideo',
+    name: 'SourceVideo',
+    component: SourceVideo
+},
+{
+    path: '/SourceFavoriteWords',
+    name: 'SourceFavoriteWords',
+    component: SourceFavoriteWords
+},
+{
+    path: '/SourceFavoriteSentences',
+    name: 'SourceFavoriteSentences',
+    component: SourceFavoriteSentences
+}
 ];
 
 var router = new VueRouter({
@@ -136,57 +194,70 @@ var router = new VueRouter({
 });
 
 
-setTimeout(() => {
 
 
+//document.addEventListener('DOMContentLoaded', function() {
 
-}, 0)
+    const appsd = new Vue({
 
-Vue.mixin({
-    components: {
-        Sidebar,
-        SentencesTable,
-        WordButtons,
-        NavList
-    }
-})
+        data() {
+            return {
+                apiUrl: '/api',
+                linkText: 'https://css-tricks.com/clean-up-your-css/',
+                articleText: '',
+                highlightText: '',
+                articleForm: '',
+                sidebarAddWordText: '',
+                favoritedWords: [],
+                saveLinkHistoryCollection: [],
+                saveWordHistoryCollection: [],
+                saveWordHistoryCollection1: [],
+                articleTextArr: [],
+                sourceLinks: [],
+                tableHelperWords: [],
+                dictionaryData: [],
+                leftTable: {
+                    'getSearch': [],
+                    'getArticles': [],
+                    'getVideos': [],
+                    'getWords': [],
+                    'getDict': [],
+                    'getDictFamily': [],
+                },
+                showDictionary: true,
+            }
+        },
+        router: router,
+        el: '#app',
+        render: h => h(Main),
+        template: '<Main/>',
+        methods: {
+            parser1(str){
+                //satır sonları
+              return str.replace(/([.?!])(\s)*(?=[a-z0-9.,'?!;:şçüğıÇÜĞŞİĞÖö’"])/g, "$1|").split("|").filter(sentence => !!sentence).map(sentence => sentence.trim());
+          },
+          matchArticleToArray(text = '', subtitle = 0) {
 
-const appsd = new Vue({
-
-    data() {
-        return {
-            apiUrl: '/api',
-            linkText: 'https://css-tricks.com/clean-up-your-css/',
-            articleText: '',
-            highlightText: '',
-            articleForm: '',
-            sidebarAddWordText: '',
-            saveWordHistoryCollection: [],
-            saveWordHistoryCollection1: [],
-            articleTextArr: [],
-            sourceLinks: [],
-            tableHelperWords: [],
-            dictionaryData: [],
-            leftTable: {
-                'getSearch': [],
-                'getArticles': [],
-                'getVideos': [],
-                'getWords': [],
-                'getDict': [],
-                'getDictFamily': [],
-            },
-            showDictionary: true,
-        }
-    },
-    router: router,
-    el: '#app',
-    render: h => h(Main),
-    template: '<Main/>',
-    methods: {
+            return text.trim().match(/(\S.+?[.!?])(?=(\s)|$)(?<!\s([a-z0-9.,'?!;:şçüğıÇÜĞŞİĞÖö’]){0,-1}.)/g)
+        },
+        replaceSidebarAtoZ(text) {
+            return text.trim().replace(/([^a-z]+)/gi, '')
+        },
+        banWords(text) {
+            text = text.toLowerCase();
+            return [].includes(text) || text.length < 1
+        },
+        sidebarOneToArray(text) {
+            return text.length > 1 ? _.uniq(text.toLowerCase().replace(/([^a-z]+)/gi, ' ').split(' ')).sort() : 0
+        },
+        rawDataClean(text) {
+            //return unescape(text.replace(/([^a-z0-9.,'?!;]+)/gi, ' '))
+            return unescape(text.replace(/([^a-z0-9.,'?!;:şçüğıÇÜĞŞİĞÖö’]+)/gim, ' '))
+        },
         searchWord(text = '', min_size = 20) {
             text = text.trim().toLowerCase();
             if (text) {
-                this.saveWordHistoryCollection1.push(text)
+                this.saveWordHistoryCollection1.unshift(text)
 
                 this.leftTable = []
                 this.tableHelperWords = []
@@ -201,23 +272,6 @@ const appsd = new Vue({
 
                     })
 
-                    /* if (text.split(' ').length && text.split(' ').length < 2) {
-
-            fetch(this.$root.apiUrl + '/word_outsource.php?text=' + text + '&type=word&url=0').then((response) => {
-              return response.json()
-            }).then((data) => {
-              if (data && data.data && data.data.sentences) {
-                let OutsourceWords = data.data.sentences.map((val, key)=> {
-                  val['text'] = val['sentence'];
-                  return val
-                })
-            // this.tableHelperWords = this.tableHelperWords.length < 5 ? this.tableHelperWords.concat(OutsourceWords) : this.tableHelperWords
-          }
-
-        })
-
-
-        } */
 
                 }, 100)
             }
@@ -225,7 +279,7 @@ const appsd = new Vue({
         },
         textSelectorEvent(text) {
             text = text.trim();
-
+console.log(text)
             if (text.trim() && typeof text.trim() === 'string' && !text.trim().includes(":")) {
                 console.log(text.trim());
                 this.tableHelperWords = []
@@ -263,20 +317,20 @@ const appsd = new Vue({
             this.tableHelperWords = []
             this.dictionaryData = []
                 //this.showDictionary = false
-            text = text.trim().replace(/([^a-z]+)/gi, '');
-            this.sidebarAddWordText = text
-            this.highlightText = text
-            this.searchWord(text)
+                text = text.trim().replace(/([^a-z]+)/gi, '');
+                this.sidebarAddWordText = text
+                this.highlightText = text
+                this.searchWord(text)
                 /*fetch('http://sentences.test/api/dictionary.php?type=important&text='+text).then((response) => {
                   return response.json()
                 }).then((data) => {
                  // console.log(data);
                   this.dictionaryData = data
-                })*/
+              })*/
 
 
-        },
-        saveWordHistory(text) {
+          },
+          saveWordHistory(text) {
             //console.log(text);
 
             this.saveWordHistoryCollection.push(text)
@@ -289,23 +343,18 @@ const appsd = new Vue({
 
 
         },
-        matchArticleToArray(text = '', subtitle = 0) {
+        saveLinkHistory(text) {
+            //console.log(text);
 
-            return text.trim().match(/(\S.+?[.!?:;])(?=(\s)|$)(?<!\s([A-Z]|[a-z]){0,-1}.)/g)
-        },
-        replaceSidebarAtoZ(text) {
-            return text.trim().replace(/([^a-z]+)/gi, '')
-        },
-        banWords(text) {
-            text = text.toLowerCase();
-            return ['and', 'that', 'one', 'any', 'for', 'this', 'the'].includes(text) || text.length < 4
-        },
-        sidebarOneToArray(text) {
-            return _.uniq(text.toLowerCase().replace(/([^a-z]+)/gi, ' ').split(' ')).sort()
-        },
-        rawDataClean(text) {
-            //return unescape(text.replace(/([^a-z0-9.,'?!;]+)/gi, ' '))
-            return unescape(text.replace(/([^a-z0-9.,'?!;:şçüğıÇÜĞŞİĞÖö’]+)/gim, ' '))
+            this.saveLinkHistoryCollection.push(text)
+            if (localStorage.getItem('linkHistory')) {
+                let wordArr = [...JSON.parse(localStorage.getItem('linkHistory')), ...this.saveLinkHistoryCollection]
+                localStorage.setItem('linkHistory', JSON.stringify(_.uniq(wordArr)))
+            } else {
+                localStorage.setItem('linkHistory', JSON.stringify(this.saveLinkHistoryCollection))
+            }
+
+
         },
         encode: function(str) {
             var buf = [];
@@ -324,26 +373,45 @@ const appsd = new Vue({
         saveWordHistorySend(text) {
 
             fetch(this.apiUrl + '/addFavorite?text=' + text.trim() + '&type=save&url=0')
-                .then((response) => {
-                    return response.json()
-                })
-                .then((data) => {
-                    // console.log(data)
+            .then((response) => {
+                return response.json()
+            })
+            .then((data) => {
+
+                   console.log('Eklendi:' + text)
+                   this.alertify.success(text)
                     this.sidebarAddWordText = '';
                 });
         },
         getAllWords() {
 
             fetch(this.apiUrl + '/all_words.json')
-                .then((response) => {
-                    return response.json()
-                })
-                .then((data) => {
-                    this.all_words = data
-                });
-        }
+            .then((response) => {
+                return response.json()
+            })
+            .then((data) => {
+                this.all_words = data
+            });
+        },
+                getWords() {
+
+          fetch(this.$root.apiUrl + '/getFavoriteWords')
+          .then((response) => {
+              return response.json()
+          })
+          .then((data) => {
+
+            this.$root.favoritedWords = _.pluck(data, 'text').reverse()
+           // console.log(data)
+        });
+
+      },
     },
     created() {
-        //this.getAllWords();
+
+
+
+        this.getWords();
     }
 });
+//});

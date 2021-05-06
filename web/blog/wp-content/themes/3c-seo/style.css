@@ -1,0 +1,527 @@
+/*
+Theme Name: 3C Left+Right
+Theme URI: http://www.easywebtutorials.com/blogging-tutorial/themes.php
+Description: 3 column layout, 1 default sidebar on either side (left and right).
+Author: Guido W. Stiehle
+Author URI: http://www.easywebtutorials.com/
+*/
+
+body {
+  	background-color: #FFFFFF;
+  	font-family: Verdana, Tahoma, sans-serif;
+  	font-size: 12px;
+  	color: #000000;
+  	margin: 10px;
+  	padding: 0;
+}
+
+
+table {
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid black;
+}
+
+
+#wrapper {
+  	width: 100%;
+  	margin: 0 auto;
+ 	border: 1px solid #666666;
+ 	padding: 0;
+}
+
+
+/* - - -   HEADER STYLES  - - - */
+
+
+#header {
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #666666;
+	padding: 0;
+}
+
+#header p {
+	margin: 15px 30px;
+	padding: 5px;
+}
+
+.blogname {
+	font-family: Verdana, Tahoma, sans-serif;
+	font-size: 26px;
+	color: #666666;
+}
+
+.blogslogan {
+	font-family: Verdana, Tahoma, sans-serif;
+	font-size: 18px;
+	color: #000000;
+}
+
+
+/* - -  Hyperlinks inside Header - - */
+
+
+#header a:link, #header a:active, #header a:visited {
+	color: #666666;
+	text-decoration: none;
+}
+
+#header a:hover {
+	color: #666666;
+	text-decoration: none;
+}
+
+#header a img {
+	border: none
+}
+
+
+/* - - - - - - - - - - - - - - -
+	GENERAL TEXT STYLES
+   - - - - - - - - - - - - - - - */
+
+/* - - Hyperlinks - - */
+
+a:link	{
+	text-decoration: underline;
+	color: #0000FF;
+}
+
+a:active {
+	text-decoration: underline;
+	color: #0000CC;
+}
+
+a:visited {
+	text-decoration: underline;
+	color: #660066;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #0066FF;
+}
+
+a img {
+	border: none;
+}
+
+
+/* - -  Headings  - - */
+
+
+h1 {
+  	font-size: 20px;
+  	font-family: Verdana, Tahoma, sans-serif;
+  	color: #333333;
+  	margin: 5px 0;
+  	padding: 0;
+}
+
+h2 {
+  	font-size: 18px;
+  	font-family: Verdana, Tahoma, sans-serif;
+  	color: #666666;
+  	margin: 5px 0;
+  	padding: 0;
+}
+
+h3 {
+  	font-size: 16px;
+  	font-family: Verdana, Tahoma, sans-serif;
+  	color: #666666;
+  	margin: 5px 0;
+  	padding: 0;
+}
+
+h4 {
+	font-size: 14px;
+	font-family: Verdana, Tahoma, sans-serif;
+	color: #000000;
+	margin: 3px 0;
+  	padding: 0;
+}
+
+
+/* - -  Paragraphs and List Items - - */
+
+
+p, li, {
+	font-size: 100%;
+	font-family: Verdana, Tahoma, sans-serif;
+	color: #000000;
+}
+
+
+/* - -  Misc. Elements - - */
+
+
+acronym, abbr {
+	border-bottom: 1px dashed #999999;
+}
+
+acronym, abbr, span.caps {
+	cursor: help;
+	font-size: 90%;
+}
+
+blockquote {
+	border-left: 2px solid #99CCFF;
+	background: #FFFFFF;
+	margin-left: 10px;
+	padding: 2px;
+}
+
+cite {
+	font-size: 90%;
+}
+
+
+/* - - - - - - - - - - - - - - - - - -
+	MAIN TABLE STYLES
+   - - - - - - - - - - - - - - - - - -
+
+/* - -  The Table - - */
+
+#main {
+	border-collapse: collapse;
+	width: 100%;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* - - - -  The CONTENT Table Data Cell - - - - */
+
+.content {
+  	vertical-align: top;
+  	background-color: #FFFFFF;
+  	padding: 10px;
+  	margin: 0;
+}
+
+
+/* - -  Everything inside the Content Table Cell - - */
+
+.content p {
+}
+
+.post, .comments-post {
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.storytitle {
+	margin-top: 10px;
+	margin-bottom: 2px;
+}
+
+.storytitle a:link, .storytitle a:active, .storytitle a:visited {
+	color: #666666;
+	text-decoration: none;
+}
+
+.storytitle a:hover {
+	color: #999999;
+	text-decoration: underline;
+}
+
+.meta {
+	font-size: 11px;
+}
+
+.meta li, ul.post-meta li {
+	display: inline;
+}
+
+.meta ul {
+	display: inline;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.meta, .meta a {
+	color: #000000;
+	font-weight: normal;
+	letter-spacing: 0;
+}
+
+.storycontent {
+}
+
+.storycontent p {
+}
+
+.feedback {
+	text-align: right;
+	clear: both;
+	margin-right: 30px;
+	font-size: 12px;
+}
+
+ul.post-meta {
+	list-style: none;
+}
+
+ul.post-meta span.post-meta-key {
+	font-weight: bold;
+}
+
+
+/* - -  The Comments - - */
+
+#comments h3 {
+	font-size: 14px;
+	font-family: Verdana, Tahoma, sans-serif;
+	color: #666666;
+}
+
+#comments p {
+}
+
+
+
+#commentlist li ul {
+	border-left: 1px solid #99CCFF;
+	font-size: 100%;
+	list-style-type: none;
+}
+
+
+/* - -  The Comment Form - - */
+
+#commentform  #comment{
+  width: 95%;
+  height: 90px;
+  background-color:#FFFFFF;
+  margin:0;
+}
+
+#commentform #name, #commentform #email, #commentform #url, #commentform textarea {
+	background: #FFFFFF;
+	border: 1px solid #666666;
+	padding: 5px;
+}
+
+#commentform textarea {
+	width: 100%;
+}
+
+
+
+/* - - - - - - - - - - - - - - - -
+	SIDEBAR STYLES
+   - - - - - - - - - - - - - - - - */
+
+/* - - left sidebar (<TD>) - - */
+
+.leftmenu {
+	width: 180px;
+	vertical-align: top;
+	padding: 0;
+  	background-color: #FFFFFF;
+	border-right: 1px solid #666666;
+}
+
+/* - - right sidebar (<TD>) - - */
+
+.rightmenu {
+  	width: 160px;
+  	vertical-align: top;
+  	padding: 0;
+  	background-color: #FFFFFF;
+  	border-left: 1px solid #666666;
+}
+
+
+.nav {
+  	padding: 0;
+}
+
+#hmenu {
+  	margin: 0;
+  	padding: 0;
+}
+
+#hnav {
+  	margin: 0;
+  	padding: 0;
+}
+
+
+/* - - Search Form - - */
+
+.nav form {
+	margin: 0;
+}
+
+.nav input#s {
+	width: 90%;
+	background: #FFFFFF;
+	border: 1px solid #666666;
+	color: #000000;
+}
+
+
+/* - - Subheadings - - */
+
+.nav h2, .nav h3, .nav h4 {
+	color:#000000;
+	font-size: 14px;
+        font-family: Verdana, Tahoma, sans-serif;
+	margin: 10px 5px 5px 0;
+	padding-bottom: 2px;
+        text-decoration: underline;
+}
+
+
+/* - - List Styles - - */
+
+.nav ul {
+	color: #000000;
+	list-style-type: none;
+	margin: 0;
+	padding: 5px 10px;
+	text-transform: none;
+}
+
+.nav ul ul {
+	font-weight: normal;
+	line-height: 100%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+
+/* - - List Items (Text) - - */
+
+.nav ul ul li {
+	border: 0;
+	font-size: 12px;
+	line-height: 150%;
+	font-family: Verdana, Tahoma, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* - - Sidebar Hyperlinks - - */
+
+.nav ul ul li a:link, .nav ul ul li a:active {
+	color: #0000FF;
+	text-decoration: underline;
+}
+
+.nav ul ul li a:visited {
+	color: #660066;
+	text-decoration: underline;
+}
+
+.nav ul ul li a:hover {
+        color: #0066FF;
+	text-decoration: underline;
+}
+
+
+/* - - - - - - - - - - - - - - - -
+	FOOTER STYLES
+   - - - - - - - - - - - - - - - - */
+
+#footer {
+  	border-top: 1px solid #666666;
+  	margin-bottom: 0;
+  	background: #FFFFFF;
+  	text-align: center;
+  	padding: 2px;
+}
+
+#footer p {
+  	margin: 3px;
+  	padding: 1px;
+}
+
+.credit {
+  	font-size: 11px;
+  	color: #666666;
+  	text-align: right;
+  	margin-bottom: 0;
+}
+
+.credit a {
+	color: #666666;
+	text-decoration: none;
+}
+
+
+/* - - - - - - - - - - - - - - - -
+	THE CALENDAR
+   - - - - - - - - - - - - - - - - */
+
+#wp-calendar {
+	border: 1px solid #DDDDDD;
+	empty-cells: show;
+	font-size: 14px;
+	margin: 0;
+	width: 90%;
+}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+}
+
+#wp-calendar a {
+	display: block;
+	text-decoration: none;
+}
+
+#wp-calendar a:hover {
+	background: #3399EE;
+	color: #333333;
+}
+
+#wp-calendar caption {
+	color: #000000;
+	font-size: 14px;
+	text-align: left;
+}
+
+#wp-calendar td {
+	color: #333333;
+	font-size: 12px;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+	letter-spacing: normal;
+	padding: 2px 0;
+	text-align: center;
+}
+
+#wp-calendar td.pad:hover {
+	background: #FFFFFF;
+}
+
+#wp-calendar td:hover, #wp-calendar #today {
+	background: #999999;
+	color: #FFFFFF;
+}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+}
+
+table {
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid black;
+}

@@ -30,7 +30,32 @@ $app->after(function ($request, $response) {
 
 
 
+function generateCsv($data = [], $fileName = 'epey', $delimiter = ',', $enclosure = '"') {
 
+
+  $handle = fopen($fileName . '.csv', 'a');
+  foreach ($data as $line) {
+   fputcsv($handle, $line, $delimiter, $enclosure);
+}
+fclose($handle);
+}
+
+
+function addFavorite($text) {
+    if ($text) {
+        $word        = setDb("Sentences.db", 'favorite_sentences')
+        ->where('text', $text)
+        ->limit(1)
+        ->find_one();
+
+if(!$word) {
+        $word       = setDb("Sentences.db", 'favorite_sentences')->create();
+        $word->text = $text;
+        $word->save();
+    }
+}
+
+}
 
 
 
@@ -72,7 +97,7 @@ function getVideoArticles($query_text, $limit, $min_size)
 
 function getWords($query_text, $limit, $min_size)
 {
-    $dest = setDb("Sentences.db", 'important_words')->where_like("text", '%' . $query_text . '%')->limit(100)->find_array();
+    $dest = setDb("Sentences.db", 'favorite_sentences')->where_like("text", '%' . $query_text . '%')->limit(100)->find_array();
 
     return $dest;
 }
@@ -80,14 +105,19 @@ function getWords($query_text, $limit, $min_size)
 function getFavoriteSentences($query_text, $limit, $min_size)
 {
 
-    $dest = setDb("Sentences.db", 'important_words')->limit(1000)->find_array();
+    $dest = setDb("Sentences.db", 'favorite_sentences')
+    ->where_like('text', '% %')
+    ->limit(5000)->find_array();
 
     return $dest;
 }
 function getFavoriteWords($query_text, $limit, $min_size)
 {
 
-    $dest = setDb("Sentences.db", 'words')->limit(1000)->find_array();
+    $dest = setDb("Sentences.db", 'favorite_sentences')
+    ->select_many('text','id')
+    ->where_not_like('text', '% %')
+    ->limit(5000)->find_array();
 
     return $dest;
 }
@@ -103,12 +133,7 @@ $app->get('/api/getSentences', function () use ($app) {
     $query_text = $_GET['text'];
 
     $has_query_text = textClean($query_text);
-    $getText        = setDb("Sentences.db", 'words')->where('word', $has_query_text)->limit(1)->find_array();
-    if (!count($getText)) {
-        $word       = setDb("Sentences.db", 'words')->create();
-        $word->word = $has_query_text;
-        $word->save();
-    }
+    addFavorite($has_query_text);
 
     $sentences = setDb("Sentences.db", 'sentences');
         //$sentences = $sentences->where_like('text', '%'.$query_text.'%')->limit(100)->find_array();
@@ -116,6 +141,10 @@ $app->get('/api/getSentences', function () use ($app) {
         //->raw_query("select distinct text, length(text) count from sentences where text like '%$query_text%' ORDER BY count limit 100")
     ->where_raw("text like '% $query_text' OR text like '$query_text %' OR text like '% $query_text %' ORDER BY length(text)")
     ->limit(250)->find_array();
+    $getDictionary = setDb("BasicDictionary.db", 'words')
+    ->where("word", $query_text)->limit(250)->find_array();
+    $getSynonyms = setDb("BasicDictionary.db", 'synonyms')
+    ->where("word", $query_text)->limit(250)->find_array();
     $getDictionarySentences = setDb("BasicDictionary.db", 'important_words')
     ->where_raw("text = '$query_text' OR text like '% $query_text' OR text like '$query_text %' OR text like '% $query_text %' ORDER BY type, text")
         //->where_like('text', '%' . $query_text . '%')
@@ -123,19 +152,16 @@ $app->get('/api/getSentences', function () use ($app) {
 
     return $app->json([
         'getSearch' => $sentences,
+        'getDict' => $getDictionary,
+        'getSynonyms' => $getSynonyms,
         'getWords'  => $getDictionarySentences,
     ], 200);
 });
 
 $app->get('/api/addFavorite', function () use ($app) {
     $query_text = textClean($_GET['text']);
-    $getText    = setDb("Sentences.db", 'important_words')->where('text', $query_text)->limit(1)->find_array();
-    if (!count($getText)) {
-        $word       = setDb("Sentences.db", 'important_words')->create();
-        $word->text = $query_text;
-        $word->save();
-    }
-    return $app->json([$word->id()], 200);
+    addFavorite($query_text);
+    return $app->json([], 200);
 });
 
 $app->get('/api/getLinks/{query_text}', function ($query_text) use ($app) {
@@ -151,6 +177,41 @@ $app->get('/api/getFavorites', function () use ($app) {
     $dest = getFavorites(0, 0, 0);
     return $app->json($dest, 200);
 });
+
+
+$app->get('/api/getLinkHistory', function () use ($app) {
+    $dest = setDb("Sentences.db", 'exported_links')
+    ->limit(2000)
+    ->order_by_desc('id')->find_array();
+    return $app->json($dest, 200);
+});
+
+
+$app->get('/api/setcsv', function () use ($app) {
+    //generateCsv($data = [], $fileName = 'epey', $delimiter = ',', $enclosure = '"')
+    $words = file_get_contents('data/eng-roots.json', 1);
+    $words = json_decode($words, 1);
+    $arrRoot = [];
+    foreach ($words as $key => $item) {
+     $ret = [
+        "type" => "root",
+        "text" => $key . ' | ' . implode(' | ', $item['examples']),
+        "defn" => implode(' | ', $item['meanings']),
+    ];
+    array_push($arrRoot, $ret);
+}
+
+generateCsv($arrRoot, 'root');
+
+
+return $app->json($arrRoot, 200);
+});
+
+$app->get('/api/getTopWords', function () use ($app) {
+    $dest    = setDb("BasicDictionary.db", 'top_words')
+    ->select_many('text')->limit(5000)->find_array();
+    return $app->json($dest, 200);
+});
 $app->get('/api/getFavoriteSentences', function () use ($app) {
     $dest = getFavoriteSentences(0, 0, 0);
     return $app->json($dest, 200);
@@ -164,15 +225,28 @@ $app->get('/api/getDictionarySentences/{query_text}', function ($query_text) use
 
     $dest = setDb("BasicDictionary.db", 'important_words');
     $dest = $dest
-    ->raw_query("select distinct text from important_words where type = '$query_text' limit 1000")->find_array();
+    ->raw_query("select distinct text from important_words where type = '$query_text' limit 5000")->find_array();
     return $app->json($dest, 200);
 });
 
 $app->get('/api/getLink', function () use ($app) {
 
-    $fullText = "";
-    $url      = htmlentities(trim($_GET['url']), ENT_QUOTES);
+
+    $strArr =  [];
     if (isset($_GET['url'])) {
+
+        $fullText = "";
+        $url      = htmlentities(trim($_GET['url']), ENT_QUOTES);
+
+
+        $link    = setDb("Sentences.db", 'exported_links')->where('link', $url)->limit(1)->find_array();
+        if (!count($link)) {
+            $word       = setDb("Sentences.db", 'exported_links')->create();
+            $word->link = $url;
+            $word->save();
+        }
+
+
 
         $html = file_get_contents($url, false, stream_context_create(array('ssl' => array('verify_peer' => false, 'verify_peer_name' => false))));
 
@@ -183,33 +257,43 @@ $app->get('/api/getLink', function () use ($app) {
             'htmlSpecialCharsDecode' => false,
             'whitespaceTextNode'     => false,
         ]);
-        $findArr  = 'div, p, h1, h2, h3, h4, h6, a, table';
+        $findArr  = 'title, div, p, h1, h2, h3, h4, h6, a, table, li';
         $totalArr = [];
         foreach ($dom->find($findArr) as $key => $content) {
             $totalArr = cleanContent($content, $totalArr);
         }
 
+        $fullText = implode('. ', $totalArr);
+        $fullText = str_replace('. . ', '. ', $fullText);
+        $fullText = str_replace('.. ', '. ', $fullText);
+        $fullText = str_replace('. .', '. ', $fullText);
+        $fullText = str_replace('. . .', '', $fullText);
+        $fullText = str_replace("\r", "", $fullText);
+        $fullText = str_replace('"', "'", $fullText);
+        $fullText = str_replace("\n", " ", $fullText);
+        $fullText = trim($fullText);
+
+        $strArr     = preg_split('/(?<=[.?!])\s+(?=[A-Z])/i', $fullText, null, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
+        $bodyString = implode(" ", $strArr);
+
+        $sentences = $bodyString;
+
+
+
+
+        $strArr    = array_map(function ($tag) {
+            if (strlen($tag) < 110) {
+             setDb("Sentences.db", 'sentences')->raw_execute("INSERT INTO sentences (text) VALUES(:text)",['text' => $tag]);
+            }
+
+            return array(
+                'text' => $tag,
+            );
+        }, $strArr);
     }
+             setDb("Sentences.db", 'sentences')->raw_execute("DELETE FROM sentences WHERE ID NOT IN (SELECT MIN(ID) FROM sentences GROUP BY text)");
 
-    $fullText = implode('. ', $totalArr);
-    $fullText = str_replace('. . ', '. ', $fullText);
-    $fullText = str_replace('.. ', '. ', $fullText);
-    $fullText = str_replace('. .', '. ', $fullText);
-    $fullText = str_replace('. . .', '', $fullText);
-    $fullText = str_replace("\r", "", $fullText);
-    $fullText = str_replace('"', "'", $fullText);
-    $fullText = str_replace("\n", " ", $fullText);
-    $fullText = trim($fullText);
 
-    $strArr     = preg_split('/(?<=[.?!])\s+(?=[A-Z])/i', $fullText, null, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
-    $bodyString = implode(" ", $strArr);
-
-    $sentences = $bodyString;
-    $strArr    = array_map(function ($tag) {
-        return array(
-            'text' => $tag,
-        );
-    }, $strArr);
     return $app->json($strArr, 200);
 });
 
@@ -232,19 +316,15 @@ $app->get('/api/getLinkFrame', function () use ($app) {
         $html = str_replace("head>", "head><base href='".$urlParse."/'>", $html);
         return strip_tags($html, '<html><head><body><base><meta><p><br><span><h1><h2><h3><h4><div><ul><li><code><style><link><title><link/><b><button><a>');
     }
-    });
+});
 
 
 $app->get('/api/testhtml', function () use ($app) {
+//api/testhtml?text=what
     $query_text = $_GET['text'];
 
     $has_query_text = textClean($query_text);
-    $getText        = setDb("Sentences.db", 'words')->where('word', $has_query_text)->limit(1)->find_array();
-    if (!count($getText)) {
-        $word       = setDb("Sentences.db", 'words')->create();
-        $word->word = $has_query_text;
-        $word->save();
-    }
+
 
     $sentences = setDb("Sentences.db", 'sentences');
         //$sentences = $sentences->where_like('text', '%'.$query_text.'%')->limit(100)->find_array();
@@ -257,7 +337,7 @@ $app->get('/api/testhtml', function () use ($app) {
         //->where_like('text', '%' . $query_text . '%')
     ->limit(20)->find_array();
 
-return $app['twig']->render('tablepop.html', [
+    return $app['twig']->render('tablepop.html', [
         'mainText' => $query_text,
         'searchs' => $sentences,
         'getWords'  => $getDictionarySentences,
@@ -279,6 +359,12 @@ return $app['twig']->render('tablepop.html', [
 
 $app->get('/testhtml2', function () use ($app) {
     return $app['twig']->render('tablepop.html', ['name' => 'Fabien']);
+});
+
+$app->get('/api/getGoogleTranslate', function () use ($app) {
+        $query_text = $_GET['text'];
+   $resp =  getGoogleTranslate($query_text);
+    return $app->json($resp, 200);
 });
 
 
